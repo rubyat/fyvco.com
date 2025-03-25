@@ -1,0 +1,14 @@
+config/hotel.php hotel_route_prefix
+
+App Name And Version
+themes/GoTrip/ThemeProvider.php
+
+Heade layout fit to transparent menu 2
+themes/GoTrip/Layout/parts/header.blade.php
+(Logo position change 50 - 90)
+
+
+
+themes/Base/ThemeProvider.php
+Module turn on off
+
