@@ -101,6 +101,12 @@ class ListCar extends BaseBlock
                     'default'=>true
                 ],
                 [
+                    'id'        => 'bg_class',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('BG Class')
+                ],
+                [
                     'id'           => 'custom_ids',
                     'type'         => 'select2',
                     'label'        => __('List by IDs'),
@@ -130,11 +136,14 @@ class ListCar extends BaseBlock
     public function content($model = [])
     {
         $list = $this->query($model);
+        
+
         $data = [
             'rows'       => $list,
             'style_list' => $model['style'],
             'title'      => $model['title'],
             'desc'       => $model['desc'],
+            'bg_class'       => $model['bg_class'],
         ];
         return view('Car::frontend.blocks.list-car.index', $data);
     }

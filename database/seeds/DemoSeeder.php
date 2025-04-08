@@ -15,12 +15,12 @@ class DemoSeeder extends Seeder
         DB::table('core_settings')->insert([
                 [
                     'name'  => "google_client_secret",
-                    'val'   => "",
+                    'val'   => "s6s_IWXAUXjcTg2X00UdsHC2",
                     'group' => "advance",
                 ],
                 [
                     'name'  => "google_client_id",
-                    'val'   => "",
+                    'val'   => "240140366958-8dddnfljlqqj4jbriv22md213lhpe7e8.apps.googleusercontent.com",
                     'group' => "advance",
                 ],
                 [
@@ -30,12 +30,12 @@ class DemoSeeder extends Seeder
                 ],
                 [
                     'name'  => "facebook_client_secret",
-                    'val'   => "",
+                    'val'   => "186949dbc3d6a9ee219b1e488e439be2",
                     'group' => "advance",
                 ],
                 [
                     'name'  => "facebook_client_id",
-                    'val'   => "",
+                    'val'   => "738807186188291",
                     'group' => "advance",
                 ],
                 [
@@ -45,12 +45,12 @@ class DemoSeeder extends Seeder
                 ],
                 [
                     'name'  => "twitter_client_id",
-                    'val'   => "",
+                    'val'   => "hVyKfgMqjd5zmF3kLuDy0v6BM",
                     'group' => "advance",
                 ],
                 [
                     'name'  => "twitter_client_secret",
-                    'val'   => "",
+                    'val'   => "5aQCEmrOF9tSLvFlXXKehgZqpmu5XA4fXkqLLaFEDOReFI68vD",
                     'group' => "advance",
                 ],
                 [
@@ -93,17 +93,17 @@ class DemoSeeder extends Seeder
                 ],
                 [
                     'name'  => "g_paypal_test_account",
-                    'val'   => "",
+                    'val'   => "danniejpt-facilitator_api1.gmail.com",
                     'group' => "payment",
                 ],
                 [
                     'name'  => "g_paypal_test_client_id",
-                    'val'   => "",
+                    'val'   => "1382325797",
                     'group' => "payment",
                 ],
                 [
                     'name'  => "g_paypal_test_client_secret",
-                    'val'   => "",
+                    'val'   => "All7UELmX8cXBdqZcLFf7Nosl74eAsKiRvpoPRbVPpTqxFwEfS0ftnuU",
                     'group' => "payment",
                 ]
             ]);
@@ -125,12 +125,12 @@ class DemoSeeder extends Seeder
                 ],
                 [
                     'name'  => "g_stripe_stripe_test_secret_key",
-                    'val'   => "",
+                    'val'   => "sk_test_lndgAdg64aanpveyTRgLBuLX",
                     'group' => "payment",
                 ],
                 [
                     'name'  => "g_stripe_stripe_test_publishable_key",
-                    'val'   => "",
+                    'val'   => "pk_test_FpBteyNZzbH26o2ONNujkwoF",
                     'group' => "payment",
                 ]
             ]);
@@ -152,12 +152,12 @@ class DemoSeeder extends Seeder
                 ],
                 [
                     'name'  => "g_two_checkout_gateway_twocheckout_account_number",
-                    'val'   => "",
+                    'val'   => "901414926",
                     'group' => "payment",
                 ],
                 [
                     'name'  => "g_two_checkout_gateway_twocheckout_secret_word",
-                    'val'   => "",
+                    'val'   => "ZTUwMjU2NzEtNTE4Ny00N2M1LThmODYtYjE3ZWIyMjFlYTQ1",
                     'group' => "payment",
                 ]
             ]);

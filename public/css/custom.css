@@ -1,0 +1,82 @@
+.own-border {
+    box-shadow: 0 0 17px #d3d3d3;
+    background: #fff;
+}
+
+.own-border.item-loop-gird-2 .cardImage__content {
+    padding: 0;
+}
+
+.own-border .carCard__content.mt-10 {
+    padding: 0 24px 18px;
+    height: 136px;
+    object-fit: cover;
+}
+
+.carCard.-type-1.own-border .carCard__image {
+    border-radius: 7px;
+    padding: 16px;
+}
+
+.price_action_area {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.price_action_area h4 a {
+    font-size: 19px;
+}
+
+.hotelsCard.-type-1.own-border .hotelsCard__image {
+    padding: 16px;
+    border-radius: 0;
+}
+
+.own-border .hotelsCard__content.mt-10 {
+    padding: 0 24px 18px;
+     object-fit: cover;
+}
+
+.right_area_side {
+    text-align: right;
+    line-height: 22px;
+}
+
+.own-border h4.hotelsCard__title, 
+.own-border h4.has-skeleton {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+span.price_text {
+    display: block;
+    font-size: 14px;
+}
+
+.layout-pt-md.bravo-about-text.right_part .row {
+    flex-direction: row-reverse;
+}
+
+.bg_black_bg {
+    background: #000;
+}
+
+.bg_black_bg h2 {
+    color: #fff;
+}
+
+@media only screen and (max-width:767px) {
+
+.layout-pt-md.bravo-about-text .col-lg-5 {
+    order: 2;
+}
+
+.faq_area .col-6 {
+    width: 100%;
+}
+
+}
