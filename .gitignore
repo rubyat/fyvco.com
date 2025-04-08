@@ -7,6 +7,7 @@ public/dist/admin
 /public/uploads/0000
 /storage/*.key
 storage/app/*
+storage/logs/*
 storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
