@@ -31,6 +31,12 @@ class FormSearchAllService extends \Modules\Template\Blocks\FormSearchAllService
             'label'     => __('Title')
         ];
         $arg[] = [
+            'id'        => 'test',
+            'type'      => 'input',
+            'inputType' => 'text',
+            'label'     => __('test')
+        ];
+        $arg[] = [
             'id'        => 'sub_title',
             'type'      => 'input',
             'inputType' => 'text',
