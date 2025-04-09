@@ -22,5 +22,6 @@ DESC AND BUTTON
 themes/GoTrip/Car/Views/frontend/blocks/list-car/style_1.blade.php
 
 
-
+Section 5 (HOTEL LIST)
+DESC AND BUTTON
 themes/GoTrip/Hotel/Views/frontend/blocks/list-hotel/carousel.blade.php
