@@ -1,4 +1,4 @@
-<section class="layout-pt-md layout-pb-md bravo-gotrip-list-hotel layout_{{$style_list}}">
+<section class="layout-pt-md layout-pb-md bravo-gotrip-list-hotel bg_black_bg layout_{{$style_list}}">
     <div data-anim="slide-up delay-1" class="container">
         <div class="row y-gap-10 @if($style_list == 'carousel_v2') justify-center @else justify-between @endif items-end">
             <div class="col-auto">

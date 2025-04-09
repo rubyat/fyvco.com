@@ -1,4 +1,4 @@
-<section class="layout-pt-md bravo-about-text">
+<section class="layout-pt-md bravo-about-text {{ $bg_class ?? "" }}">
     <div class="container">
         <div class="row y-gap-30 justify-between items-center">
             <div class="col-lg-5">

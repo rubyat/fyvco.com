@@ -107,6 +107,12 @@ class ListCar extends BaseBlock
                     'default'=>true
                 ],
                 [
+                    'id'        => 'bg_class',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('BG Class')
+                ],
+                [
                     'id'           => 'custom_ids',
                     'type'         => 'select2',
                     'label'        => __('List Car by IDs'),

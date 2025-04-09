@@ -38,6 +38,12 @@ class AboutText extends BaseBlock
                     'label' => __('Image Uploader'),
                 ],
                 [
+                    'id'        => 'bg_class',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('BG Class')
+                ],
+                [
                     'id'          => 'list_item',
                     'type'        => 'listItem',
                     'label'       => __('List Item(s)'),

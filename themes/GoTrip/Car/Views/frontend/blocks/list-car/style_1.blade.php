@@ -1,4 +1,4 @@
-<section class="layout-pt-md layout-pb-md bravo-list-event">
+<section class="layout-pt-md layout-pb-md bravo-list-event bg_black_bg {{ $bg_class ?? "" }}">
     <div data-anim-wrap class="container">
         <div data-anim-child="slide-up delay-1" class="row  y-gap-20 justify-center text-center">
             <div class="col-auto">

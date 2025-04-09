@@ -19,7 +19,7 @@
         </div>
     </section>
     @endif
-    <section class="layout-pt-md layout-pb-lg">
+    <section class="layout-pt-md layout-pb-lg bg-light-2">
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-4">

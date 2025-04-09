@@ -111,13 +111,10 @@
                                                 }
                                             @endphp
 
-                                                    {{-- @if(!empty($page_vendor = get_page_url ( setting_item('vendor_page_become_an_expert'))))
+                                                    @if(!empty($page_vendor = get_page_url ( setting_item('vendor_page_become_an_expert'))))
                                                         <a href="{{ $page_vendor }}" class="{{$btn_expert}} button px-30 fw-400 text-14  h-50">{{ __('Become An Expert') }}</a>
-                                                    @endif --}}
-                                                    <a data-bs-toggle="modal" href="#login" class="{{$btn_login}} button px-30 fw-400 text-14  h-50 ml-20">
-                                                        {{-- {{ __('Sign In / Register') }} --}}
-                                                        <img class="avatar rounded-circle" src="{{ asset('images/avatar.png') }}" alt="{{ __('Sign In / Register') }}" width="30" height="30">
-                                                    </a>
+                                                    @endif
+                                                    <a data-bs-toggle="modal" href="#login" class="{{$btn_login}} button px-30 fw-400 text-14  h-50 ml-20">{{ __('Sign In / Register') }}</a>
                                                 </div>
                                             @else
                                                 <li class="login-item menu-item-has-children">
@@ -128,26 +125,25 @@
                                                         @else
                                                             <span class="avatar-text rounded-circle">{{ucfirst( Auth::user()->getDisplayName()[0])}}</span>
                                                         @endif
-                                                        {{ Auth::user()->getDisplayName() }}
+                                                        {{__("Hi, :Name",['name'=>Auth::user()->getDisplayName()])}}
                                                     </span>
                                                         <i class="icon icon-chevron-sm-down"></i>
                                                     </a>
                                                     <ul class="subnav">
-                                                        {{-- @if(Auth::user()->hasPermission('dashboard_vendor_access'))
+                                                        @if(Auth::user()->hasPermission('dashboard_vendor_access'))
                                                             <li><a href="{{route('vendor.dashboard')}}" class="dropdown-item"><i class="fa fa-line-chart mr-10"></i> {{__("Vendor Dashboard")}}</a></li>
-                                                        @endif --}}
-                                                        {{-- <li class="@if(Auth::user()->hasPermission('dashboard_vendor_access')) menu-hr @endif">
-                                                            <a href="{{route('user.profile.index')}}" class="dropdown-item"><i class="fa fa-address-card mr-10"></i> {{__("My profile")}}</a>
-                                                        </li> --}}
-                                                        @if(Auth::user()->hasPermission('dashboard_access'))
-                                                            <li class="menu-hr"><a href="{{route('admin.index')}}" class="dropdown-item"><i class="fa fa-dashboard mr-10"></i> {{__("Admin Dashboard")}}</a></li>
                                                         @endif
+                                                        <li class="@if(Auth::user()->hasPermission('dashboard_vendor_access')) menu-hr @endif">
+                                                            <a href="{{route('user.profile.index')}}" class="dropdown-item"><i class="fa fa-address-card mr-10"></i> {{__("My profile")}}</a>
+                                                        </li>
                                                         @if(setting_item('inbox_enable'))
                                                             <li class="menu-hr"><a href="{{route('user.chat')}}" class="dropdown-item"><i class="fa fa-comments mr-10"></i> {{__("Messages")}}</a></li>
                                                         @endif
                                                         <li class="menu-hr"><a href="{{route('user.booking_history')}}" class="dropdown-item"><i class="fa fa-clock-o mr-10"></i> {{__("Booking History")}}</a></li>
                                                         <li class="menu-hr"><a href="{{route('user.change_password')}}" class="dropdown-item"><i class="fa fa-lock mr-10"></i> {{__("Change password")}}</a></li>
-
+                                                        @if(Auth::user()->hasPermission('dashboard_access'))
+                                                            <li class="menu-hr"><a href="{{route('admin.index')}}" class="dropdown-item"><i class="fa fa-dashboard mr-10"></i> {{__("Admin Dashboard")}}</a></li>
+                                                        @endif
                                                         <li class="menu-hr">
                                                             <a class="dropdown-item"  href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out mr-10"></i> {{__('Logout')}}</a>
                                                         </li>
