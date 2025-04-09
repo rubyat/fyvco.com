@@ -88,6 +88,62 @@ class FormSearchAllService extends \Modules\Template\Blocks\FormSearchAllService
             'default'=>false
         ];
 
+
+        $arg[] = [
+            'id'    => 'villa_image',
+            'type'  => 'uploader',
+            'label' => __('Villa Icon')
+        ];
+
+        $arg[] = [
+            'id'        => 'villa_title',
+            'type'      => 'input',
+            'inputType' => 'text',
+            'label'     => __('Villa Title')
+        ];
+
+        $arg[] = [
+            'id'    => 'villa_button_image',
+            'type'  => 'uploader',
+            'label' => __('Villa Button Image')
+        ];
+
+        $arg[] = [
+            'id'        => 'villa_button_link',
+            'type'      => 'input',
+            'inputType' => 'text',
+            'label'     => __('Villa button link')
+        ];
+
+
+        // car part
+
+        $arg[] = [
+            'id'    => 'car_image',
+            'type'  => 'uploader',
+            'label' => __('Car Icon')
+        ];
+
+        $arg[] = [
+            'id'        => 'car_title',
+            'type'      => 'input',
+            'inputType' => 'text',
+            'label'     => __('Car Title')
+        ];
+
+        $arg[] = [
+            'id'    => 'car_button_image',
+            'type'  => 'uploader',
+            'label' => __('Car Button Image')
+        ];
+
+        $arg[] = [
+            'id'        => 'car_button_link',
+            'type'      => 'input',
+            'inputType' => 'text',
+            'label'     => __('Car button link')
+        ];
+
         return [
             'settings' => $arg,
             'category'=>__("Other Block")
@@ -97,6 +153,12 @@ class FormSearchAllService extends \Modules\Template\Blocks\FormSearchAllService
     public function content($model = [])
     {
         $model['bg_image_url'] = FileHelper::url($model['bg_image'] ?? "", 'full') ?? "";
+        $model['villa_image_url'] = FileHelper::url($model['villa_image'] ?? "", 'full') ?? "";
+        $model['villa_button_image_url'] = FileHelper::url($model['villa_button_image'] ?? "", 'full') ?? "";
+
+        $model['car_image_url'] = FileHelper::url($model['car_image'] ?? "", 'full') ?? "";
+        $model['car_button_image_url'] = FileHelper::url($model['car_button_image'] ?? "", 'full') ?? "";
+
         $model['list_location'] = $model['tour_location'] =  Location::where("status","publish")->limit(1000)->orderBy('name', 'asc')->with(['translation'])->get()->toTree();
         $model['style'] = $model['style'] ?? "";
         $model['list_slider'] = $model['list_slider'] ?? "";
@@ -111,6 +173,7 @@ class FormSearchAllService extends \Modules\Template\Blocks\FormSearchAllService
             'boat'   => 'icon-yatch',
             'flight' => 'icon-tickets'
         ];
+
         return $this->view('Template::frontend.blocks.form-search-all-service.index', $model);
     }
 

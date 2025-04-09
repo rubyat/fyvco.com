@@ -31,6 +31,18 @@ class ListCar extends BaseBlock
                     'label'     => __('Desc')
                 ],
                 [
+                    'id'        => 'button_name',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('Button Name')
+                ],
+                [
+                    'id'        => 'button_url',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('Button Url')
+                ],
+                [
                     'id'        => 'number',
                     'type'      => 'input',
                     'inputType' => 'number',
@@ -146,6 +158,9 @@ class ListCar extends BaseBlock
             'rows'       => $list,
             'title'      => $model['title'] ?? "",
             'desc'       => $model['desc'] ?? "",
+            'bg_class'       => $model['bg_class'] ?? "",
+            'button_name'       => $model['button_name'] ?? "",
+            'button_url'       => $model['button_url'] ?? "",
         ];
 
         return $this->view('Car::frontend.blocks.list-car.'.$model['style'], $data);

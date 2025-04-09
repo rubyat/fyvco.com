@@ -12,3 +12,15 @@ themes/GoTrip/Layout/parts/header.blade.php
 themes/Base/ThemeProvider.php
 Module turn on off
 
+
+
+
+
+
+Section 3 (CAR LIST)
+DESC AND BUTTON
+themes/GoTrip/Car/Views/frontend/blocks/list-car/style_1.blade.php
+
+
+
+themes/GoTrip/Hotel/Views/frontend/blocks/list-hotel/carousel.blade.php

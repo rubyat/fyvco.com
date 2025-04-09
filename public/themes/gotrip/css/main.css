@@ -4151,9 +4151,6 @@ h1, h2, h3, h4, h5, h6 {
 .masthead.-type-3 {
 
   position: relative;
-
-  padding-top: 360px;
-
   padding-bottom: 100px;
 
 }
@@ -4163,11 +4160,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 991px) {
 
   .masthead.-type-3 {
-
-    padding-top: 220px;
-
     padding-bottom: 80px;
-
   }
 
 }
@@ -4177,11 +4170,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767px) {
 
   .masthead.-type-3 {
-
-    padding-top: 160px;
-
     padding-bottom: 30px;
-
   }
 
 }
@@ -24110,11 +24099,7 @@ table.table-5 td {
 
 }
 
-.form_search_style_2{
 
-    padding-top: 287px !important;
-
-}
 
 @media only screen and (max-width: 992px) {
 

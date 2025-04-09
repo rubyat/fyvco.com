@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="citiesCard__content mt-10">
                                     <h4 class="text-18 lh-13 fw-500 text-dark-1">{{ $translation->name }}</h4>
-                                    @if(is_array($service_type))
+                                    {{-- @if(is_array($service_type))
                                         @php $count_all = 0; @endphp
                                         @foreach($service_type as $k => $type)
                                             @php $count_all += (int) $row->getDisplayNumberServiceInLocation($type) @endphp
@@ -35,7 +35,7 @@
                                         @if(!empty($text_service = $row->getDisplayNumberServiceInLocation($service_type)))
                                             <span class="text-14 text-light-1">{{$text_service}}</span>
                                         @endif
-                                    @endif
+                                    @endif --}}
                                 </div>
                             </div>
                         @if($to_location_detail) </a> @endif

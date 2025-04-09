@@ -1,10 +1,9 @@
-<section class="layout-pt-md layout-pb-md bravo-list-event bg_black_bg {{ $bg_class ?? "" }}">
+<section class="layout-pt-md layout-pb-md bravo-list-event {{ $bg_class ?? "" }} block_layout">
     <div data-anim-wrap class="container">
         <div data-anim-child="slide-up delay-1" class="row  y-gap-20 justify-center text-center">
             <div class="col-auto">
                 <div class="sectionTitle -md">
                     <h2 class="sectionTitle__title">{{ $title ?? '' }}</h2>
-                    <p class=" sectionTitle__text mt-5 sm:mt-0">{{ $desc ?? '' }}</p>
                 </div>
             </div>
         </div>
@@ -23,6 +22,15 @@
                     }
                 @endphp
             @endforeach
+        </div>
+
+        <div data-anim-child="slide-up delay-1" class="row  y-gap-20 justify-center text-center">
+            <div class="col-auto">
+                <div class="sectionDetails">
+                    <h2 >{{ $desc ?? '' }}</h2>
+                    <a href="{{ $button_url }}" class="">{{ $button_name }}</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -5,10 +5,12 @@
     <div class="container">
         <div class="row justify-center">
             <div class="col-xl-10">
-                <div class="text-center">
-                    <h1 data-anim-child="slide-up delay-4" class="text-60 lg:text-40 md:text-30 text-white">{{ $title }}</h1>
-                    <p data-anim-child="slide-up delay-5" class="text-white mt-6 md:mt-10">{{ $sub_title }}</p>
-                </div>
+                @if(!empty($title) && !empty($sub_title))
+                    <div class="text-center">
+                        <h1 data-anim-child="slide-up delay-4" class="text-60 lg:text-40 md:text-30 text-white">{{ $title }}</h1>
+                        <p data-anim-child="slide-up delay-5" class="text-white mt-6 md:mt-10">{{ $sub_title }}</p>
+                    </div>
+                @endif
                 <div data-anim-child="slide-up delay-6" class="masthead__tabs">
                     <div class="tabs -bookmark js-tabs">
                         <div class="tabs__controls d-flex items-center js-tabs-controls">
@@ -45,6 +47,44 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="fyv_icon_rating_area">
+                    <div class="fyv_icon_rating">
+
+                        <div class="villa_part fyv_item_area">
+                            <div class="fyv_item_icon">
+                                <img src="{{ $villa_image_url }}" alt="{{ $villa_title }}">
+                            </div>
+                            <div class="fyv_item_title">
+                                {{ $villa_title }}
+                            </div>
+                            <div class="fyv_item_icon">
+                                <a href="{{ $villa_button_link }}" target="_blank">
+                                    <img src="{{ $villa_button_image_url }}" alt="{{ $villa_title }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="fyv_rating_devider"></div>
+
+                        <div class="car_part fyv_item_area">
+                            <div class="fyv_item_icon">
+                                <img src="{{ $car_image_url }}" alt="{{ $car_title }}">
+                            </div>
+                            <div class="fyv_item_title">
+                                {{ $car_title }}
+                            </div>
+                            <div class="fyv_item_icon">
+                                <a href="{{ $car_button_link }}" target="_blank">
+                                    <img src="{{ $car_button_image_url }}" alt="{{ $car_title }}">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
         </div>
     </div>

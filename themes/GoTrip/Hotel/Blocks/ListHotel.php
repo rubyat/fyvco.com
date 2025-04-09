@@ -25,6 +25,18 @@ class ListHotel extends \Modules\Hotel\Blocks\ListHotel
                     'label'     => __('Desc')
                 ],
                 [
+                    'id'        => 'button_name',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('Button Name')
+                ],
+                [
+                    'id'        => 'button_url',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('Button Url')
+                ],
+                [
                     'id'        => 'number',
                     'type'      => 'input',
                     'inputType' => 'number',
@@ -103,6 +115,12 @@ class ListHotel extends \Modules\Hotel\Blocks\ListHotel
                     ]
                 ],
                 [
+                    'id'        => 'bg_class',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('BG Class')
+                ],
+                [
                     'type'=> "checkbox",
                     'label'=>__("Only featured items?"),
                     'id'=> "is_featured",
@@ -139,6 +157,9 @@ class ListHotel extends \Modules\Hotel\Blocks\ListHotel
             'style_list' => $model['style'],
             'title'      => $model['title'],
             'desc'       => $model['desc'],
+            'bg_class'       => $model['bg_class'] ?? "",
+            'button_name'       => $model['button_name'] ?? "",
+            'button_url'       => $model['button_url'] ?? "",
             'locations'  => $locations
         ];
         return view('Hotel::frontend.blocks.list-hotel.index', $data);

@@ -114,7 +114,14 @@
                                                     @if(!empty($page_vendor = get_page_url ( setting_item('vendor_page_become_an_expert'))))
                                                         <a href="{{ $page_vendor }}" class="{{$btn_expert}} button px-30 fw-400 text-14  h-50">{{ __('Become An Expert') }}</a>
                                                     @endif
-                                                    <a data-bs-toggle="modal" href="#login" class="{{$btn_login}} button px-30 fw-400 text-14  h-50 ml-20">{{ __('Sign In / Register') }}</a>
+                                                    {{-- <a data-bs-toggle="modal" href="#login" class="{{$btn_login}} button px-30 fw-400 text-14  h-50 ml-20">
+                                                        <img class="avatar rounded-circle" src="{{ asset('images/avatar.png') }}" alt="{{ __('Sign In / Register') }}" width="30" height="30">
+                                                    </a> --}}
+                                                    <li class="login-item">
+                                                        <a data-bs-toggle="modal" href="#login" class="is_login">
+                                                            <img class="avatar rounded-circle" src="{{ asset('images/avatar.png') }}" alt="{{ __('Sign In / Register') }}" width="30" height="30">
+                                                        </a>
+                                                    </li>
                                                 </div>
                                             @else
                                                 <li class="login-item menu-item-has-children">

@@ -1,10 +1,9 @@
-<section class="layout-pt-md layout-pb-md bravo-gotrip-list-hotel bg_black_bg layout_{{$style_list}}">
+<section class="layout-pt-md layout-pb-md bravo-gotrip-list-hotel {{ $bg_class ?? "" }} layout_{{$style_list}}">
     <div data-anim="slide-up delay-1" class="container">
         <div class="row y-gap-10 @if($style_list == 'carousel_v2') justify-center @else justify-between @endif items-end">
             <div class="col-auto">
                 <div class="sectionTitle -md">
                     <h2 class="sectionTitle__title">{{$title}}</h2>
-                    <p class=" sectionTitle__text mt-5 sm:mt-0">{{$desc}}</p>
                 </div>
             </div>
         </div>
@@ -45,5 +44,16 @@
             @endif
 
         </div>
+
+
+        <div data-anim-child="slide-up delay-1" class="row  y-gap-20 justify-center text-center">
+            <div class="col-auto">
+                <div class="sectionDetails">
+                    <h2 >{{ $desc ?? '' }}</h2>
+                    <a href="{{ $button_url }}" class="">{{ $button_name }}</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>

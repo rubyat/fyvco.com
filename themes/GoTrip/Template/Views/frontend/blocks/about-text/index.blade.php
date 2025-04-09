@@ -1,7 +1,7 @@
 <section class="layout-pt-md bravo-about-text {{ $bg_class ?? "" }}">
     <div class="container">
         <div class="row y-gap-30 justify-between items-center">
-            <div class="col-lg-5">
+            <div class="col-lg-8">
                 <h2 class="text-30 fw-600">{{ $title ?? "" }}</h2>
                 <p class="mt-5">{{ $desc ?? "" }}</p>
                 <p class="text-dark-1 mt-60 lg:mt-40 md:mt-20">
@@ -9,7 +9,7 @@
                 </p>
             </div>
             @if($img = get_file_url($bg_image,'full'))
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <img src="{{ $img }}" alt="{{ $title ?? "" }}" class="rounded-4">
                 </div>
             @endif
