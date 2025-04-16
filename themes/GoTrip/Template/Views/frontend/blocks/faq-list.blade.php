@@ -1,4 +1,4 @@
-<section class="bravo-faq-lists layout-pt-lg layout-pb-lg">
+<section class="bravo-faq-lists mb-50">
 
     <div class="container">
 

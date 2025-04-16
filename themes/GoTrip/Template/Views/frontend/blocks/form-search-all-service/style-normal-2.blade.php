@@ -1,10 +1,10 @@
-<section data-anim-wrap class="masthead -type-3 relative z-5 form_search_style_2">
+<section data-anim-wrap class="masthead -type-3 relative z-5 form_search_style_2 new_form_area">
     <div data-anim-child="fade delay-1" class="masthead__bg bg-dark-3">
         <img src="{{ $bg_image_url }}"alt="image" data-src="{{ $bg_image_url }}" class="js-lazy">
     </div>
     <div class="container">
         <div class="row justify-center">
-            <div class="col-xl-10">
+            <div class="col-xl-12">
                 @if(!empty($title) && !empty($sub_title))
                     <div class="text-center">
                         <h1 data-anim-child="slide-up delay-4" class="text-60 lg:text-40 md:text-30 text-white">{{ $title }}</h1>
@@ -22,7 +22,7 @@
                                         $service = $allServices[$service_type];
                                     @endphp
                                     <div class="">
-                                        <button class="tabs__button px-30 py-20 rounded-4 fw-600 text-white js-tabs-button @if($number==0) is-tab-el-active @endif" data-tab-target=".-tab-item-{{$service_type}}">
+                                        <button class="tabs__button rounded-4 fw-600 text-white js-tabs-button fvy_tab_button @if($number==0) is-tab-el-active @endif" data-tab-target=".-tab-item-{{$service_type}}">
                                             <i class="{{$icons[$service_type]}} text-20 mr-10"></i>
                                             {{$service::getModelName()}}
                                         </button>
@@ -58,11 +58,21 @@
                             <div class="fyv_item_title">
                                 {{ $villa_title }}
                             </div>
-                            <div class="fyv_item_icon">
-                                <a href="{{ $villa_button_link }}" target="_blank">
-                                    <img src="{{ $villa_button_image_url }}" alt="{{ $villa_title }}">
-                                </a>
+
+                            <div class="fyv_review_area">
+                                <div class="fyv_item_review_text">
+                                    Based on 127 reviews
+                                </div>
+                                <div class="fyv_item_icon">
+                                    <a href="{{ $villa_button_link }}" target="_blank">
+                                        <img src="{{ $villa_button_image_url }}" alt="{{ $villa_title }}">
+                                    </a>
+                                </div>
+                                <div class="fyv_item_review_org">
+                                    Trustpilot
+                                </div>
                             </div>
+
                         </div>
                         <div class="fyv_rating_devider"></div>
 
@@ -73,10 +83,18 @@
                             <div class="fyv_item_title">
                                 {{ $car_title }}
                             </div>
-                            <div class="fyv_item_icon">
-                                <a href="{{ $car_button_link }}" target="_blank">
-                                    <img src="{{ $car_button_image_url }}" alt="{{ $car_title }}">
-                                </a>
+                            <div class="fyv_review_area">
+                                <div class="fyv_item_review_text">
+                                    Based on 127 reviews
+                                </div>
+                                <div class="fyv_item_icon">
+                                    <a href="{{ $car_button_link }}" target="_blank">
+                                        <img src="{{ $car_button_image_url }}" alt="{{ $car_title }}">
+                                    </a>
+                                </div>
+                                <div class="fyv_item_review_org">
+                                    Trustpilot
+                                </div>
                             </div>
                         </div>
 

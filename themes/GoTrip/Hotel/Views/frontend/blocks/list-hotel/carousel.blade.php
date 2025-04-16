@@ -48,7 +48,7 @@
 
         <div data-anim-child="slide-up delay-1" class="row  y-gap-20 justify-center text-center">
             <div class="col-auto">
-                <div class="sectionDetails">
+                <div class="sectionDetails hotel">
                     <h2 >{{ $desc ?? '' }}</h2>
                     <a href="{{ $button_url }}" class="">{{ $button_name }}</a>
                 </div>

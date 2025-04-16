@@ -1,4 +1,4 @@
-<section class="layout-pt-md layout-pb-md bravo-list-locations @if(!empty($layout)) {{ $layout }} @endif">
+<section class="layout-pt-md layout-pb-md bravo-list-locations bg_ash_bg_foorer @if(!empty($layout)) {{ $layout }} @endif">
     <div class="container">
         <div class="row">
             <div class="col-auto">
@@ -29,7 +29,7 @@
                                 <div class="d-block">
                                     @if(!empty($link_location)) <a href="{{ $link_location }}"> @endif
                                         <div class="text-15 fw-500">{{$translation->name}}</div>
-                                        <div class="text-14 text-light-1">
+                                        {{-- <div class="text-14 text-light-1">
                                             @if(is_array($service_type))
                                                 @foreach($service_type as $k => $type)
                                                     @php $count = $row->getDisplayNumberServiceInLocation($type) @endphp
@@ -48,7 +48,7 @@
                                                     <span class="me-2">{{$text_service}}</span>
                                                 @endif
                                             @endif
-                                        </div>
+                                        </div> --}}
                                     @if(!empty($link_location)) </a> @endif
                                 </div>
                             </div>

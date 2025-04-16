@@ -45,7 +45,7 @@
                 </div>
                 @if($row->getGallery())
                     <div class="mt-20">
-                        @include('Layout::common.detail.gallery5',['galleries' => $row->getGallery()])
+                        @include('Layout::common.detail.gallery5car',['galleries' => $row->getGallery()])
                     </div>
                 @endif
             </div>

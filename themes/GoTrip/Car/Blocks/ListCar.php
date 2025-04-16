@@ -175,6 +175,9 @@ class ListCar extends BaseBlock
     }
 
     public function query($model){
+
+        $model['orderby'] = 'rate_high_low';
+
         $listCar = $this->carClass->search($model);
         $limit = $model['number'] ?? 5;
         return $listCar->paginate($limit);

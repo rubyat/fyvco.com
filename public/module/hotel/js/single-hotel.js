@@ -328,7 +328,13 @@
                         bookingCoreApp.showError(this.i18n.date_required);
                         return;
                     }
+                }else{
+                    if(!this.start_date || !this.start_date){
+                        return;
+                    }
                 }
+
+                
                 this.onLoadAvailability = true;
                 $.ajax({
                     url:bookingCore.module.hotel+'/checkAvailability',

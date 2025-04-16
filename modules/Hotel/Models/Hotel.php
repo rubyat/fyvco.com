@@ -74,7 +74,7 @@ class Hotel extends Bookable
 
     public static function getModelName()
     {
-        return __("Hotel");
+        return __("Villa");
     }
 
     public static function getTableName()

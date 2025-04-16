@@ -210,7 +210,7 @@
 
   --color-border: #DDDDDD;
 
-  --color-dark-1: #051036;
+  --color-dark-1: #2c2221;
 
   --color-dark-2: #0D2857;
 
@@ -224,7 +224,7 @@
 
   --color-light-3: #FBFCFF;
 
-  --color-blue-1: #3554D1;
+  --color-blue-1: #2c2221;
 
   --color-blue-2: #E5F0FD;
 
@@ -6795,8 +6795,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header.is-menu-opened {
 
-  background-color: white !important;
-
   border-bottom: 1px solid var(--color-border);
 
 }
@@ -6880,15 +6878,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .header .header-logo img:nth-child(2) {
-
-  position: absolute;
-
-  top: 0;
-
-  left: 0;
-
   opacity: 0;
-
 }
 
 
@@ -23677,7 +23667,7 @@ table.table-5 td {
 
 @media (max-width: 767px) {
 
-  .cruiseSlider__nav {
+  /* .cruiseSlider__nav {
 
     top: unset;
 
@@ -23701,7 +23691,7 @@ table.table-5 td {
 
     left: calc(50% + 10px);
 
-  }
+  } */
 
 }
 

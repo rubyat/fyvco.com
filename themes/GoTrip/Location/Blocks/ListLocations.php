@@ -3,6 +3,7 @@ namespace Themes\GoTrip\Location\Blocks;
 
 use Modules\Template\Blocks\BaseBlock;
 use Modules\Location\Models\Location;
+use Modules\Core\Models\Terms;
 
 class ListLocations extends \Modules\Location\Blocks\ListLocations
 {
@@ -156,9 +157,17 @@ class ListLocations extends \Modules\Location\Blocks\ListLocations
 
     public function content($model = [])
     {
+        
+
         $list = $this->query($model);
+
+
+        $brandList = Terms::where("attr_id", 17)->get();
+
+        
         $data = [
             'rows'         => $list,
+            'brandList'         => $brandList,
             'title'        => $model['title'],
             'desc'         => $model['desc'] ?? "",
             'service_type' => $model['service_type'],

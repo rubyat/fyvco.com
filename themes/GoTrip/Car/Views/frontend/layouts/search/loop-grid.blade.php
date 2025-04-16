@@ -80,7 +80,7 @@
 
     <div class="carCard__content mt-10">
 
-        <div class="d-flex items-center lh-14 mb-5">
+        <div class="d-flex items-center lh-14 mb-5 car_loaction_name">
 
             @if(!empty($row->location->name))
 
@@ -94,7 +94,7 @@
 
         <div class="price_action_area">
 
-          <h4 class="text-dark-1 text-18 lh-16 fw-500 has-skeleton">
+          <h4 class="text-dark-1 text-18 lh-16 fw-500 has-skeleton car_title">
 
             <a class="text-dark-1-i" @if(!empty($blank)) target="_blank" @endif href="{{ $row->getDetailUrl() }}"> <span>{{ $translation->title }}</span></a>
          </h4>
@@ -119,7 +119,7 @@
 
         <p class="text-light-1 lh-14 text-14 mt-5"></p>
 
-        <div class="row x-gap-20 y-gap-10 items-center pt-5">
+        <div class="description_Car_hotel row x-gap-20 y-gap-10 items-center pt-5">
 
             <div class="col-auto">
 

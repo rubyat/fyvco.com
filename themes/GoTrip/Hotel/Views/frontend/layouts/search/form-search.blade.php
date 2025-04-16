@@ -8,7 +8,8 @@
     }
     if($style == 'normal2'){
         $classes = 'mainSearch bg-white pr-20 py-20 lg:px-20 lg:pt-5 lg:pb-20 rounded-4 shadow-1';
-        $button_classes = " -dark-1 py-15 h-60 col-12 rounded-100 bg-blue-1 text-white w-100";
+        //$button_classes = " -dark-1 py-15 h-60 col-12 rounded-100 bg-blue-1 text-white w-100";
+        $button_classes = " -dark-1 py-15 h-60 col-12 bg-black-1 text-white w-100";
     }
     if($style == 'carousel_v2'){
         $classes = " w-100";
@@ -23,7 +24,7 @@
     }
     $search_style = setting_item('hotel_location_search_style',"normal")
 @endphp
-<form action="{{ route("hotel.search") }}" class="gotrip_form_search bravo_form_search bravo_form form {{ $classes }}" method="get">
+<form action="{{ route("hotel.search") }}" class="gotrip_form_search bravo_form_search bravo_form form {{ $classes }} hotel_form" method="get">
     @if( !empty(Request::query('_layout')) )
         <input type="hidden" name="_layout" value="{{Request::query('_layout')}}">
     @endif

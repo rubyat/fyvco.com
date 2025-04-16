@@ -1,5 +1,7 @@
 @php
-    $headerStyle = (!empty($row->header_style)) ? $row->header_style : 'normal' ;
+    $headerStyle = (!empty($row->header_style)) ? $row->header_style : 'transparent_v2' ;
+
+    //dd($headerStyle);
     $dataBg = 'bg-dark-1';
     $navTextStyle =  'text-white';
     switch ($headerStyle){
@@ -47,9 +49,9 @@
         @break
     @default
         <header data-add-bg="{{ $dataBg }}" class="header {{ $headerClass }} js-header bravo_header style-{{ $headerStyle }}" data-x="header" data-x-toggle="is-menu-opened">
-            <div data-anim="fade" class="{{ $container_class ?? 'header__container' }} px-30 sm:px-20 @if($headerStyle == 'transparent_v2') container @endif is-in-view">
+            <div data-anim="fade" class="{{ $container_class ?? 'header__container' }} px-30- sm:px-20 @if($headerStyle == 'transparent_v2') container @endif is-in-view">
                 <div class="row justify-between items-center">
-                    <div class="col-auto @if($headerStyle == 'transparent_v7') col-left @endif">
+                    <div class="col-auto col-md-3 @if($headerStyle == 'transparent_v7') col-left @endif">
                         @php
                             $logo = setting_item('logo_id');
                             $logoDark = setting_item('logo_id_dark');
@@ -69,8 +71,8 @@
                         @endif
                     </div>
             @if($headerStyle == 'transparent_v3' || $headerStyle == 'transparent_v2')
-                <div class="col-auto xl:d-none">
-                    <a href="{{url(app_get_locale(false,'/'))}}" class="header-logo mr-20" data-x="header-logo" data-x-toggle="is-logo-dark">
+                <div class="col-auto col-md-6 text-center xl:d-none">
+                    <a href="{{url(app_get_locale(false,'/'))}}" class="header-logo" data-x="header-logo" data-x-toggle="is-logo-dark">
                         @if($logo)
                             <img class="logo-light" src="{{get_file_url($logo,'full')}}" alt="{{setting_item("site_title")}}">
                         @endif
@@ -80,8 +82,8 @@
                     </a>
                 </div>
             @endif
-            <div class="col-auto">
-                <div class="d-flex items-center">
+            <div class="col-auto col-md-3">
+                <div class="d-flex items-center justify-end">
                     <div class="header-menu menu-right">
                         <div class="mobile-overlay"></div>
                         <div class="header-menu__content">
@@ -90,7 +92,7 @@
                                     @include('Core::frontend.currency-switcher')
                                     @include('Language::frontend.switcher-dropdown')
                                     @if(!Auth::check())
-                                        <div class="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
+                                        
                                             @php $btn_expert = '-white bg-white text-dark-1';
                                                 $btn_login = 'border-white -outline-white text-white';
                                                 if ($headerStyle == 'transparent_v6'){
@@ -111,18 +113,48 @@
                                                 }
                                             @endphp
 
-                                                    @if(!empty($page_vendor = get_page_url ( setting_item('vendor_page_become_an_expert'))))
+                                                    {{-- @if(!empty($page_vendor = get_page_url ( setting_item('vendor_page_become_an_expert'))))
                                                         <a href="{{ $page_vendor }}" class="{{$btn_expert}} button px-30 fw-400 text-14  h-50">{{ __('Become An Expert') }}</a>
-                                                    @endif
+                                                    @endif --}}
                                                     {{-- <a data-bs-toggle="modal" href="#login" class="{{$btn_login}} button px-30 fw-400 text-14  h-50 ml-20">
                                                         <img class="avatar rounded-circle" src="{{ asset('images/avatar.png') }}" alt="{{ __('Sign In / Register') }}" width="30" height="30">
                                                     </a> --}}
-                                                    <li class="login-item">
-                                                        <a data-bs-toggle="modal" href="#login" class="is_login">
-                                                            <img class="avatar rounded-circle" src="{{ asset('images/avatar.png') }}" alt="{{ __('Sign In / Register') }}" width="30" height="30">
+                                                    <li class="login-item menu-item-has-children">
+                                                        <a href="javascript:;" class="is_login">
+                                                            <img class="avatar" src="{{ asset('images/icons/fyv/help-icon.png') }}" alt="FYV" width="30" height="30">
                                                         </a>
+
+                                                        <ul class="subnav">
+                                                            <li class="menu-hr">
+                                                                <a class="dropdown-item" href="#" ><i class="fa fa-whatsapp mr-10"></i>  Whatsapp</a>
+                                                            </li>
+                                                            <li class="menu-hr">
+                                                                <a class="dropdown-item" href="#" ><i class="fa fa-comments mr-10"></i>  Live Chat</a>
+                                                            </li>
+                                                            <li class="menu-hr">
+                                                                <a class="dropdown-item" href="#" ><i class="fa fa-phone mr-10"></i>  Call Us</a>
+                                                            </li>
+                                                            <li class="menu-hr">
+                                                                <a class="dropdown-item" href="#" ><i class="fa fa-envelope-o mr-10"></i>  Email</a>
+                                                            </li>
+                                                        </ul>
                                                     </li>
-                                                </div>
+                                                    <li class="login-item menu-item-has-children">
+                                                        <a  class="is_login">
+                                                            <img class="avatar" src="{{ asset('images/icons/fyv/account-user.png') }}" alt="{{ __('Sign In / Register') }}" width="30" height="30">
+                                                        </a>
+
+
+        
+                                                        <ul class="subnav">
+                                                            <li class="menu-hr">
+                                                                <a class="dropdown-item" href="{{route('login')}}" ><i class="fa fa-sign-in mr-10"></i> {{__('Login')}}</a>
+                                                            </li>
+                                                            <li class="menu-hr">
+                                                                <a class="dropdown-item"  data-bs-toggle="modal" href="#register" ><i class="fa fa-user mr-10"></i> {{__('Registration')}}</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
                                             @else
                                                 <li class="login-item menu-item-has-children">
                                                     <a href="#" class="is_login">

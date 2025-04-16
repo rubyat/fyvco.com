@@ -92,7 +92,7 @@ class Car extends Bookable
 
     public static function getModelName()
     {
-        return __("Car");
+        return __("Vehicle");
     }
 
     public static function getTableName()
@@ -904,6 +904,8 @@ class Car extends Bookable
             $query->orderByRaw('FIELD (' . $query->qualifyColumn("id") . ', ' . implode(', ', $ids) . ') ASC');
         }
         $orderby = $request['orderby'] ?? "";
+        
+
         switch ($orderby){
             case "price_low_high":
                 $raw_sql = "CASE WHEN IFNULL( bravo_cars.sale_price, 0 ) > 0 THEN bravo_cars.sale_price ELSE bravo_cars.price END AS tmp_min_price";
@@ -919,6 +921,7 @@ class Car extends Bookable
                 $query->orderBy("review_score", "desc");
                 break;
             default:
+
                 if(!empty($request['order']) and !empty($request['order_by'])){
                     $query->orderBy("bravo_cars.".$request['order'], $request['order_by']);
                 }else{

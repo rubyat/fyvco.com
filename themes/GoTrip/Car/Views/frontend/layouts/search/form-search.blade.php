@@ -11,7 +11,8 @@
     }
     if($style == 'normal2'){
         $classes = 'mainSearch bg-white pr-20 py-20 lg:px-20 lg:pt-5 lg:pb-20 rounded-4 shadow-1';
-        $button_classes = " -dark-1 py-15 h-60 col-12 rounded-100 bg-blue-1 text-white w-100";
+        // $button_classes = " -dark-1 py-15 h-60 col-12 rounded-100 bg-blue-1 text-white w-100";
+        $button_classes = " -dark-1 py-15 h-60 col-12 bg-black-1 text-white w-100";
     }
     if($style == 'carousel_v2'){
         $classes = " w-100";
@@ -27,7 +28,7 @@
     }
 @endphp
 
-<form action="{{ route("car.search") }}" class="gotrip_form_search bravo_form_search bravo_form form-search-all-service form {{ $classes }}" method="get">
+<form action="{{ route("car.search") }}" class="gotrip_form_search bravo_form_search bravo_form form-search-all-service form {{ $classes }} car_form" method="get">
     @if( !empty(Request::query('_layout')) )
         <input type="hidden" name="_layout" value="{{Request::query('_layout')}}">
     @endif
@@ -37,7 +38,7 @@
                 return $value['position'] ?? 0;
             }));
     @endphp
-    <div class="field-items">
+    <div class="field-items car_filter">
         <div class="row w-100 m-0">
             @if(!empty($car_search_fields))
                 @foreach($car_search_fields as $field)
@@ -48,10 +49,10 @@
                                 @include('Layout::common.search.fields.service_name')
                                 @break
                             @case ('location')
-                                @include('Layout::common.search.fields.location')
+                                @include('Layout::common.search.fields.location_car')
                                 @break
                             @case ('date')
-                                @include('Layout::common.search.fields.date')
+                                @include('Layout::common.search.fields.date_car')
                                 @break
                             @case ('attr')
                                 @include('Layout::common.search.fields.attr')
@@ -61,6 +62,14 @@
                 @endforeach
             @endif
         </div>
+        
+
+
+
+
+
+
+
     </div>
     <div class="button-item">
         <button class="mainSearch__submit button {{ $button_classes }}" type="submit">

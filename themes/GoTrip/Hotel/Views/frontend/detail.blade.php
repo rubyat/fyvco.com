@@ -106,7 +106,7 @@
         var bravo_booking_i18n = {
 			no_date_select:'{{__('Please select Start and End date')}}',
             no_guest_select:'{{__('Please select at least one guest')}}',
-            load_dates_url:'{{route('space.vendor.availability.loadDates')}}',
+            load_dates_url:'{{route('hotel.vendor.availability.loadDates')}}',
             name_required:'{{ __("Name is Required") }}',
             email_required:'{{ __("Email is Required") }}',
         };

@@ -91,7 +91,7 @@
 
                 <div class="d-inline-flex justify-content-md-end align-baseline">
 
-                    <div class="text-16 text-red-1 line-through mr-5">{{ $row->display_sale_price }}</div>
+                    <div class="text-16 text-red-1 line-through mr-5 ">{{ $row->display_sale_price }}</div>
 
                     <div class="text-22 lh-12 fw-600 text-blue-1">{{ $row->display_price }}</div>
 
@@ -110,7 +110,7 @@
 
             @php $location =  $row->location->translate() @endphp
 
-            <p class="text-light-1 lh-14 text-14 mt-5">{{$location->name}}</p>
+            <p class="text-light-1 lh-14 text-14 mt-5 description_Car_hotel">{{$location->name}}</p>
 
         @endif
 

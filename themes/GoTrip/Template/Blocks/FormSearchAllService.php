@@ -165,11 +165,11 @@ class FormSearchAllService extends \Modules\Template\Blocks\FormSearchAllService
         $model['modelBlock'] = $model;
         $model['seatType'] =  SeatType::get();
         $model['icons'] = [
+            'car'    => 'icon-car',
             'hotel'  => 'icon-bed',
             'tour'   => 'icon-destination',
             'space'  => 'icon-ski',
             'event'  => 'icon-home',
-            'car'    => 'icon-car',
             'boat'   => 'icon-yatch',
             'flight' => 'icon-tickets'
         ];

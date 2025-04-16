@@ -2,7 +2,7 @@
     $footerStyle = !empty($row->footer_style) ? $row->footer_style : setting_item('footer_style','normal');
     $footer_classes = "-type-1";
     if($footerStyle == "style_1"){
-        $footer_classes = "-type-1 text-white bg-dark-2";
+        $footer_classes = "-type-1 text-white bg-dark-1";
     }
     if($footerStyle == "style_2"){
         $footer_classes = "-type-2 bg-light-2";
@@ -14,7 +14,7 @@
         $footer_classes = "-type-2 bg-blue-1 text-white";
     }
     if($footerStyle == "style_5"){
-        $footer_classes = "-type-2 bg-dark-2 text-white";
+        $footer_classes = "-type-2 bg-dark-1 text-white";
     }
     if($footerStyle == "style_6"){
         $footer_classes = "-type-1 text-white bg-blue-1";
@@ -27,7 +27,7 @@
     }
 @endphp
 
-<div class="footer {{ $footer_classes }} {{$footerStyle}}">
+<div class="footer  bg_ash_bg_foorer {{ $footer_classes }} {{$footerStyle}}">
     <div class="container">
         @switch($footerStyle)
             @case('style_4')

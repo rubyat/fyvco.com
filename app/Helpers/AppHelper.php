@@ -170,6 +170,19 @@ function get_image_tag($image_id,$size = 'thumb',$options = []){
     }
     return '';
 }
+
+function get_fvy_image_tag($image_id,$size = 'thumb',$options = []){
+
+    $url = get_file_url($image_id,$size);
+    if($url){
+        $alt = $options['alt'] ?? '';
+        $attr = '';
+        $class= $options['class'] ?? '';
+        $attr.=" src='".e($url)."' ";
+        return sprintf("<img class='%s' %s alt='%s'>",e($class),$attr,e($alt));
+    }
+    return '';
+}
 function get_date_format(){
     return setting_item('date_format','m/d/Y');
 }

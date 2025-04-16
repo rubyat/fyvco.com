@@ -18,7 +18,7 @@
             step:1,
             start_date_obj:'',
             allEvents:[],
-            number:0,
+            number:1,
             max_number:1,
             total_price_before_fee:0,
             total_price_fee:0,

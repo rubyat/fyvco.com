@@ -7,10 +7,28 @@
     padding: 0;
 }
 
-.own-border .carCard__content.mt-10 {
+.own-border .carCard__content {
     padding: 0 24px 18px;
-    height: 136px;
+/*    height: 136px;*/
     object-fit: cover;
+}
+
+.description_Car_hotel {
+    display: none;
+}
+
+.sectionDetails a {
+    background: #fff;
+    color: #000;
+    padding: 8px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.sectionDetails {
+    padding: 38px 0 0;
 }
 
 .carCard.-type-1.own-border .carCard__image {
@@ -20,12 +38,13 @@
 
 .price_action_area {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .price_action_area h4 a {
-    font-size: 19px;
+    font-size: 15px;
 }
 
 .hotelsCard.-type-1.own-border .hotelsCard__image {
@@ -41,14 +60,6 @@
 .right_area_side {
     text-align: right;
     line-height: 22px;
-}
-
-.own-border h4.hotelsCard__title, 
-.own-border h4.has-skeleton {
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 
@@ -69,14 +80,636 @@ span.price_text {
     color: #fff;
 }
 
+.header {
+    background: #2c2221;
+}
+
+.home-page .header {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.header .row {
+    
+    margin-top: 0;
+}
+
+.header .header-logo img {
+    width: 109px;
+}
+
+.form_search_style_2 {
+    padding-top: 178px !important;
+}
+
+
+
+.fyv_icon_rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 50px 0;
+    /* position: relative; */
+}
+
+.villa_part.fyv_item_area {
+    text-align: right;
+}
+
+.car_part.fyv_item_area {
+    text-align: left;
+}
+
+.fyv_rating_devider {
+    position: relative;
+    z-index: 2;
+    margin: 0 40px;
+}
+
+.fyv_rating_devider::before {
+    position: absolute;
+    top: -174px;
+    left: 0;
+    width: 1px;
+    height: 300px;
+    background: #fff;
+    content: '';
+}
+
+.fyv_item_icon img {
+    position: relative;
+    z-index: 2;
+    width: 150px;
+}
+
+
+.fyv_item_title {
+    color: #fff;
+    font-size: 28px;
+    letter-spacing: 5px;
+    padding: 20px 0 0;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.fyv_item_review_text {
+    font-weight: 500;
+}
+
+.fyv_item_review_org {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.masthead.-type-3 {
+    padding-bottom: 30px!important;
+}
+
+
+.form_search_style_2 {
+    padding-top: 0px !important;
+}
+
+.new_form_area .tabs.-bookmark.js-tabs {
+    background: #fff;
+    border-radius: 25px;
+}
+
+.new_form_area form.gotrip_form_search.bravo_form_search {
+    border-radius: 25px;
+}
+
+
+.new_form_area .bravo_wrap .gotrip_form_search {
+    border-radius: 0 0 25px 25px;
+}
+
+
+
+.new_form_area .tabs.-bookmark .tabs__button {
+    background: #b9b7b7;
+    color: #000;
+}
+
+
+.tabs.-bookmark .tabs__button {
+    background: #cacaca;
+    border-radius: 50px;
+}
+
+
+.new_form_area.masthead.-type-3 .masthead__tabs .tabs__controls {
+    bottom: 0;
+    padding: 20px 30px 0;
+    gap: 10px;
+}
+
+.bg_ash_bg_foorer {
+    background: #f2f2f2;
+}
+
+.bg_ash_bg_foorer .footer_one.pt-60.pb-60 {
+    border-top: 1px solid #8a8888;
+}
+
+.new_form_area .tabs__content .tabs__pane form {
+    min-height: 115px;
+}
+
+
+
+.time_date_picker_form .date-wrapper {
+    flex: 1;
+    text-align: center;
+}
+
+.time_date_picker_form .fvy_date_picker_time {
+    width: 80px;
+}
+
+
+.pickup_form_area .searchMenu-loc {
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    padding: 8px;
+    flex: 1;
+}
+
+.pickup_form_area .searchMenu-loc.return_location {
+    border-color: #fff;
+}
+
+.pickup_form_area .searchMenu-loc.return_location.has-val {
+    border-color: #d6d6d6;
+}
+
+.pickup_form_area {
+    gap: 20px;
+}
+
+.pickup_form_area 
+ span.clear-loc {
+    top: 11px;
+    right: 10px;
+}
+
+
+
+.bravo_wrap .gotrip_form_search .field-items.car_filter > .row > div{
+    border-right: none;
+}
+
+.car_pick_time {
+    gap: 10px;
+}
+
+.car_pick_time .time_picker_single_part {
+    flex: 1;
+}
+
+
+
+
+.time_date_picker_form {
+    display: flex;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+}
+
+.time_date_picker_form .date-wrapper {
+    border-right: 1px solid #d6d6d6;
+}
+
+.time_date_picker_form .date-wrapper, 
+.time_date_picker_form .fvy_date_picker_time {
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+.hotel_form .button-item .mainSearch__submit,
+.car_form .button-item .mainSearch__submit{
+    height: 47px !important;
+    margin-top: 24px;
+    background-color: #2c2221;
+    border-radius: 8px;
+}
+
+
+.icon-menu:before {
+    content: "";
+    background-image: url('../images/icons/fyv/nav_toggle.png');
+    width: 42px;
+    height: 32px;
+    background-size: contain;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.fyv_icon_rating_area {
+    position: relative;
+    z-index: -1;
+}
+
+.login-item .is_login img{
+    border-radius: 0 !important;
+}
+
+.header .header-menu .menu__nav .login-item a.is_login{
+    padding: 0 5px;
+}
+
+
+
+
+.bravo_wrap .bravo_header.is-sticky .header-logo img {
+    width: 109px;
+}
+
+
+.home-page .bravo_wrap .bravo_header.is-sticky .header-logo .logo-dark,
+.home-page .bravo_wrap .bravo_header .header-logo .logo-light{
+    display: none;
+    opacity: 0;
+}
+
+.home-page .bravo_wrap .bravo_header.is-sticky .header-logo .logo-light,
+.home-page .bravo_wrap .bravo_header .header-logo .logo-dark{
+    display: unset;
+    opacity: 1;
+}
+
+
+
+
+
+.new_form_area .tabs.-bookmark .tabs__button.is-tab-el-active {
+    margin: 0;
+}
+
+.new_form_area button.tabs__button.fvy_tab_button {
+    padding: 15px 25px;
+    border-radius: 20px;
+    height: 45px !important;
+    min-width: 125px;
+}
+
+.new_form_area button.tabs__button.fvy_tab_button.is-tab-el-active {
+    background: #2c2221;
+    color: #fff !important;
+}
+
+
+.masthead.-type-3 .masthead__bg::after {
+    display: none !important;
+}
+
+
+
+
+.car_listing_home_page .carCard.-type-1.own-border .carCard__image {
+    border-radius: 0;
+    padding: 5px;
+}
+
+.car_listing_home_page .own-border .carCard__content {
+    padding: 5px;
+}
+.car_listing_home_page .own-border {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.car_listing_home_page .has-skeleton-type-price,
+.car_listing_home_page .price_text,
+.car_listing_home_page .car_loaction_name {
+    display: none !important;
+}
+.car_listing_home_page .single_car {
+    flex: 0 0 auto;
+    width: 20%;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+
+.fyv_home_rating .checked {
+    color: #3301f5;
+}
+
+.fyv.home_name_rev .car_name {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fyv_home_rating {
+    gap: 3px;
+    font-size: 12px;
+}
+
+
+.brand_list {
+    text-align: center;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.brand_list img {
+    border-radius: 10px 10px 0 0px;
+}
+
+
+
+
+.new_form_area .icon-car:before {
+    content: "";
+    background-image: url('../images/icons/fyv/car-icon.png');
+    width: 25px;
+    height: 21px;
+    background-size: contain;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+
+.new_form_area .icon-bed:before {
+    content: "";
+    background-image: url('../images/icons/fyv/villa-icon.png');
+    width: 25px;
+    height: 21px;
+    background-size: contain;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+
+.new_form_area .tabs__button.is-tab-el-active i:before{
+    filter: invert(1);
+}
+
+
+.fixedNow.fixed_menu_bottom_cont {
+    bottom: 0px;
+}
+
+.fixed_menu_bottom_cont {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    height: 0px;
+    justify-content: center;
+    align-items: center;
+    transition: bottom 0.7s;
+    bottom: -300px;
+    left: 0px;
+    z-index: 2;
+}
+
+.fixed_menu_bottom {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    display: flex;
+    margin: 0px auto;
+    background: #EBEDF0;
+    box-shadow: 0px 5px 7px rgb(155 181 181 / 38%);
+    height: 80px;
+    position: absolute;
+    top: -108px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.fixed_menu_bottom > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.fixed_menu_bottom > div > a {
+    height: 54px;
+    font-size: 20px;
+    color: #024648;
+    background-color: #fff;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 5px 7px rgba(155, 181, 181, 0.25);
+    border-radius: 37.5px;
+    font-weight: 600;
+}
+
+.fixed_menu_bottom > div.box-submit > a {
+    color: #fff;
+    background-color: #2f2121;
+}
+
+i.whatsapp_button {
+    background-image: url(../images/icons/fyv/whatsapp_icon.png);
+}
+
+i.whatsapp_button, i.search_lens {
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.car_listing_home_page .item-loop-gird-2 .cardImage__content img{
+    object-fit: cover;
+}
+
+.bravo_wrap .bravo_header .header-menu.menu-right .menu__nav li.login-item .subnav:before {
+    left: unset;
+    right: 15px;
+}
+
+.submit-group.book_via_sms{
+    display: none;
+}
+
+
+.header .header-menu .menu .login-item .subnav > li.menu-hr {
+    margin-bottom: 5px;
+}
+
+.header .header-menu .menu .login-item .subnav > li > a.dropdown-item {
+    background-color: rgba(53, 84, 209, 0.05);
+}
+
+
+.header .header-menu .menu .login-item .subnav > li > a.dropdown-item:hover {
+    background-color: #fff;
+}
+
+
+.header .header-menu .menu .login-item a.is_login {
+    transform: translate(0px, 0) !important;
+}
+
+.car_input_date_range {
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    color: #d6d6d6;
+}
+
+.car_input_date_range.has-date {
+    color: #000;
+}
+
+
+
+.hotel_rooms_form .nav-enquiry .enquiry-item.active span,
+.bravo_single_book .nav-enquiry .enquiry-item.active span {
+    position: relative;
+}
+
+.hotel_rooms_form .nav-enquiry .enquiry-item.active span:after,
+.bravo_single_book .nav-enquiry .enquiry-item.active span:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+}
+
+
+.fyv_car_gallery{
+    display: block;
+    overflow: hidden;
+}
+
+
+.fyv_car_gallery .swiper-notification{
+    display: none;
+}
+
+.hotel_rooms_form .nav-enquiry .enquiry-item {
+    flex: 0 0 100% !important;
+}
+
+
+.whatsapp_booking_button .col-auto {
+    min-width: 200px;
+}
+
+
+.header .header-menu .menu .login-item .subnav {
+    top: 80%;
+}
+
+
+
 @media only screen and (max-width:767px) {
 
-.layout-pt-md.bravo-about-text .col-lg-5 {
-    order: 2;
-}
+    .layout-pt-md.bravo-about-text .col-lg-5 {
+        order: 2;
+    }
 
-.faq_area .col-6 {
-    width: 100%;
-}
+    .faq_area .col-6 {
+        width: 100%;
+    }
+
+    .form_search_style_2 {
+        padding-top: 70px !important;
+    }
+
+
+    .fyv_icon_rating {
+        display: block;
+    }
+
+    .villa_part.fyv_item_area {
+        text-align: center;
+    }
+
+    .car_part.fyv_item_area {
+        text-align: center;
+        padding-top: 31px;
+    }
+
+    .fyv_rating_devider::before {
+        content: none;
+    }
+
+    .fyv_rating_devider {
+        border-bottom: 1px solid #636262;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+
+    .fyv_item_title {
+        font-size: 22px;
+        letter-spacing: 2.5px;
+    }
+
+    .car_listing_home_page .single_car {
+        width: 50%;
+        padding: 7px;
+    }
+
+
+
+    .fixed_menu_bottom {
+        width: 90%;
+        height: 55px;
+        top: -70px;
+    }
+
+    .fixed_menu_bottom > div > a {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .bravo_wrap .bravo_header.is-menu-opened .header-logo .logo-dark{
+        display: none;
+    }
+
+    .header .header-logo.is-logo-dark img:nth-child(1) {
+        opacity: 1;
+    }
+
+    .bravo_header .icon-user {
+        font-size: 40px !important;
+    }
+
+    .bravo_header.is-menu-opened .icon-user {
+        color: #fff;
+    }
+
+    .submit-group.book_via_sms{
+        display: block;
+    }
+
+    .whatsapp_booking_button .col-auto {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .hotel_rooms_form .form-search-rooms .form-search-row > div {
+        width: 100%;
+    }
+
+    .searchMenu-guests__field {
+        left: -20px !important;
+        right: -20px !important;
+    }
+
 
 }

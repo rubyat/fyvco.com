@@ -36,7 +36,7 @@ class ModuleProvider extends ModuleServiceProvider
         if(!Car::isEnable()) return [];
         return [
             'car'=>[
-                "position"=>45,
+                "position"=>32,
                 'url'        => route('car.admin.index'),
                 'title'      => __('Car'),
                 'icon'       => 'ion-logo-model-s',
@@ -88,7 +88,7 @@ class ModuleProvider extends ModuleServiceProvider
                 'class' => Car::class,
                 'name'  => __("Car"),
                 'items' => Car::searchForMenu(),
-                'position'=>51
+                'position'=>41
             ]
         ];
     }
@@ -101,7 +101,7 @@ class ModuleProvider extends ModuleServiceProvider
                 'url'   => route('car.vendor.index'),
                 'title'      => __("Manage Car"),
                 'icon'       => Car::getServiceIconFeatured(),
-                'position'   => 70,
+                'position'   => 30,
                 'permission' => 'car_view',
                 'children' => [
                     [

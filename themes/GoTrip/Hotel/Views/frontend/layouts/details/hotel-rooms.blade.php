@@ -1,12 +1,9 @@
 @php $review_score = $row->review_data @endphp
-<h3 class="text-22 fw-500 heading-section mb-20 pt-40">{{__('Available Rooms')}}</h3>
+<h3 class="text-22 fw-500 heading-section mb-20 pt-40">{{__('Check Availability')}}</h3>
 <div id="hotel-rooms-form" class="hotel_rooms_form border-light rounded-4 shadow-4" v-cloak="" :class="{'d-none':enquiry_type!='book'}">
     <div class="nav-enquiry d-flex" v-if="is_form_enquiry_and_book">
         <div class="enquiry-item active" >
             <span>{{ __("Book") }}</span>
-        </div>
-        <div class="enquiry-item" data-toggle="modal" data-target="#enquiry_form_modal">
-            <span>{{ __("Enquiry") }}</span>
         </div>
     </div>
     <div class="form-book">
@@ -111,5 +108,41 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="booking_exta_buttons border-light rounded-4 shadow-4 mt-10 px-10 py-10">
+    
+    <div class="whatsapp_booking_button">
+        <div class="row">
+            <div class="col-auto">
+                <div class="submit-group">
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=+13053361130&amp;text=Hi&amp;app_absent=0" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">
+                        <span>{{__("BOOK VIA WHATSAPP")}}</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="submit-group book_via_sms col-auto">
+                <a target="_blank" href="sms:+13053361130;?&amp;body= Hi, I need to book a Car" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">
+                    <span>{{__("BOOK VIA SMS")}}</span>
+                </a>
+            </div>
+
+            <div class="col-auto">
+
+                <div class="submit-group" >
+                    <a data-toggle="modal" data-target="#enquiry_form_modal" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">
+                        <span>{{__("Enquiry")}}</span>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @include('Hotel::frontend.layouts.details.hotel-room-list')
 @include("Booking::frontend.global.enquiry-form",['service_type'=>'hotel'])

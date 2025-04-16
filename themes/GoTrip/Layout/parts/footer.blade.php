@@ -1,6 +1,6 @@
 <?php
 $footerStyle = !empty($row->footer_style) ? $row->footer_style : setting_item('footer_style','normal');
-$mailchimp_classes = "bg-dark-2";
+$mailchimp_classes = "bg-dark-1";
 $button_classes = "bg-blue-1 text-white";
 if($footerStyle == "style_6"){
     $mailchimp_classes = "bg-blue-1";
@@ -78,6 +78,7 @@ if($footerStyle == "style_6"){
 
 {{-- home.js --}}
 <script src="{{ asset('themes/gotrip/dist/frontend/js/gotrip.js?_ver='.config('app.asset_version')) }}"></script>
+<script src="{{ asset('js/custom.js?_ver=1.1') }}"></script>
 
 @if(request('preview'))
     <script src="{{ asset('themes/gotrip/module/template/preview.js?_ver='.config('app.asset_version')) }}"></script>

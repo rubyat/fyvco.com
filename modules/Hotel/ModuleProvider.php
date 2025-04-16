@@ -41,7 +41,7 @@ class ModuleProvider extends ModuleServiceProvider
         if(!Hotel::isEnable()) return [];
         return [
             'hotel'=>[
-                "position"=>32,
+                "position"=>45,
                 'url'        => route('hotel.admin.index'),
                 'title'      => __('Hotel'),
                 'icon'       => 'fa fa-building-o',
@@ -93,7 +93,7 @@ class ModuleProvider extends ModuleServiceProvider
                 'class' => Hotel::class,
                 'name'  => __("Hotel"),
                 'items' => Hotel::searchForMenu(),
-                'position'=>41
+                'position'=>51
             ]
         ];
     }
@@ -107,7 +107,7 @@ class ModuleProvider extends ModuleServiceProvider
                 'url'   => route('hotel.vendor.index'),
                 'title'      => __("Manage Hotel"),
                 'icon'       => Hotel::getServiceIconFeatured(),
-                'position'   => 30,
+                'position'   => 70,
                 'permission' => 'hotel_view',
                 'children' => [
                     [
