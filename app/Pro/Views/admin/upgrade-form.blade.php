@@ -4,7 +4,7 @@
     </div>
     <div class="col-md-6">
         <div class="py-3 pr-3 h-100">
-            <form method="post" action="{{route('pro.buy')}}" class=" h-100 d-flex flex-column "> @csrf
+            <form method="post" action="" class=" h-100 d-flex flex-column "> @csrf
                 <h5 class="mb-3">Upgrade to PRO to unlock unlimited access to all of our features, including:</h5>
                 <div class="mb-5">
                     <div class="mb-1">

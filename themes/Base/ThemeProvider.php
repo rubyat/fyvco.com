@@ -46,6 +46,7 @@ class ThemeProvider extends AbstractThemeProvider
         'vendor'    => \Modules\Vendor\ModuleProvider::class,
         'coupon'    => \Modules\Coupon\ModuleProvider::class,
         'location'  => \Modules\Location\ModuleProvider::class,
+        'brand'     => \Modules\Brand\ModuleProvider::class,
         'review'    => \Modules\Review\ModuleProvider::class,
         'popup'     => \Modules\Popup\ModuleProvider::class,
 

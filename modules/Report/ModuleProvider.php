@@ -19,12 +19,12 @@ class ModuleProvider extends \Modules\ModuleServiceProvider
         $count += $pending_purchase;
         return [
             'report'=>[
-                "position"=>110,
+                "position"=>1,
                 'url'        => route('report.admin.booking'),
                 'title'      =>  __('Reports :count',['count'=>$count ? sprintf('<span class="badge badge-warning">%d</span>',$count) : '']),
                 'icon'       => 'icon ion-ios-pie',
                 'permission' => 'report_view',
-                'group' => 'system',
+                //'group' => 'system',
                 'children'   => [
                     'enquiry'=>[
                         'url'        => route('report.admin.enquiry.index'),

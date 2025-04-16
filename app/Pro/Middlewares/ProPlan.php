@@ -16,11 +16,11 @@ class ProPlan
      */
     public function handle($request, \Closure $next, $guard = null)
     {
-        if (strpos($request->path(), 'install') === false && file_exists(storage_path() . '/installed')) {
-            if (!isPro()) {
-                return redirect(route('pro.upgrade'));
-            }
-        }
+        // if (strpos($request->path(), 'install') === false && file_exists(storage_path() . '/installed')) {
+        //     if (!isPro()) {
+        //         return redirect(route('pro.upgrade'));
+        //     }
+        // }
 
         return $next($request);
     }

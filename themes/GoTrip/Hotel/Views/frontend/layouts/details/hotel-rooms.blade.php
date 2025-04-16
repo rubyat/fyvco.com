@@ -109,10 +109,10 @@
     </div>
 </div>
 
-
+@include('Hotel::frontend.layouts.details.hotel-room-list')
 
 <div class="booking_exta_buttons border-light rounded-4 shadow-4 mt-10 px-10 py-10">
-    
+
     <div class="whatsapp_booking_button">
         <div class="row">
             <div class="col-auto">
@@ -144,5 +144,5 @@
 </div>
 
 
-@include('Hotel::frontend.layouts.details.hotel-room-list')
+
 @include("Booking::frontend.global.enquiry-form",['service_type'=>'hotel'])

@@ -16,6 +16,7 @@ use Modules\Event\Models\Event;
 use Modules\Event\Models\EventTerm;
 use Modules\Event\Models\EventTranslation;
 use Modules\Core\Models\Attributes;
+use Modules\Brand\Models\Brand;
 use Modules\Location\Models\Location;
 use Modules\Location\Models\LocationCategory;
 
@@ -25,16 +26,18 @@ class EventController extends AdminController
     protected $event_translation;
     protected $event_term;
     protected $attributes;
+    protected $brand;
     protected $location;
     private $locationCategoryClass;
 
-    public function __construct(Event $event, EventTranslation $event_translation, EventTerm $event_term, Attributes $attributes, Location $location,LocationCategory $locationCategoryClass)
+    public function __construct(Event $event, EventTranslation $event_translation, EventTerm $event_term, Attributes $attributes, Location $location,LocationCategory $locationCategoryClass, Brand $brand)
     {
         $this->setActiveMenu(route('event.admin.index'));
         $this->event = $event;
         $this->event_translation = $event_translation;
         $this->event_term = $event_term;
         $this->attributes = $attributes;
+        $this->brand = $brand;
         $this->location = $location;
         $this->locationCategoryClass = $locationCategoryClass;
     }
@@ -61,6 +64,9 @@ class EventController extends AdminController
         }
         if (!empty($location_id = $request->query('location_id'))) {
             $query->where('location_id', $location_id);
+        }
+        if (!empty($brand_id = $request->query('brand_id'))) {
+            $query->where('brand_id', $brand_id);
         }
         if ($this->hasPermission('event_manage_others')) {
             if (!empty($author = $request->input('vendor_id'))) {

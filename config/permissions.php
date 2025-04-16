@@ -94,6 +94,13 @@ return [
     'location_delete',
     'location_manage_others',
 
+    // Brand
+    'brand_view',
+    'brand_create',
+    'brand_update',
+    'brand_delete',
+    'brand_manage_others',
+
     //Review
     'review_manage_others',
 
