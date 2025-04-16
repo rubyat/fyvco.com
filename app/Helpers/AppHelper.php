@@ -1054,7 +1054,7 @@ function is_api(){
 }
 
 function is_demo_mode(){
-    return env('DEMO_MODE',false);
+    return false;
 }
 function credit_to_money($amount){
     return $amount * setting_item('wallet_credit_exchange_rate',1);

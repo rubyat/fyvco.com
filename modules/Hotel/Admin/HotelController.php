@@ -100,11 +100,11 @@ class HotelController extends AdminController
             'translation'    => new $this->hotelTranslationClass(),
             'breadcrumbs'    => [
                 [
-                    'name' => __('Hotels'),
+                    'name' => __('Villas'),
                     'url'  => route('hotel.admin.index')
                 ],
                 [
-                    'name'  => __('Add Hotel'),
+                    'name'  => __('Add Villa'),
                     'class' => 'active'
                 ],
             ],
@@ -136,7 +136,7 @@ class HotelController extends AdminController
             'recovery'           => 1,
             'breadcrumbs'        => [
                 [
-                    'name' => __('Hotels'),
+                    'name' => __('Villas'),
                     'url'  => route('hotel.admin.index')
                 ],
                 [
@@ -172,11 +172,11 @@ class HotelController extends AdminController
             'enable_multi_lang'=>true,
             'breadcrumbs'    => [
                 [
-                    'name' => __('Hotels'),
+                    'name' => __('Villas'),
                     'url'  => route('hotel.admin.index')
                 ],
                 [
-                    'name'  => __('Edit Hotel'),
+                    'name'  => __('Edit Villa'),
                     'class' => 'active'
                 ],
             ],
@@ -258,11 +258,11 @@ class HotelController extends AdminController
             if($id > 0 ){
                 event(new UpdatedServiceEvent($row));
 
-                return back()->with('success',  __('Hotel updated') );
+                return back()->with('success',  __('Villa updated') );
             }else{
                 event(new CreatedServicesEvent($row));
 
-                return redirect(route('hotel.admin.edit',$row->id))->with('success', __('Hotel created') );
+                return redirect(route('hotel.admin.edit',$row->id))->with('success', __('Villa created') );
             }
         }
     }

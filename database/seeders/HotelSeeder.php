@@ -439,7 +439,7 @@ class HotelSeeder extends Seeder
         }
 
         $attr = new Attributes([
-            'name'=>'Hotel Service',
+            'name'=>'Villa Service',
             'service'=>'hotel'
         ]);
         $attr->save();

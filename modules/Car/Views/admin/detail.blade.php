@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="d-flex justify-content-between mb20">
                 <div class="">
-                    <h1 class="title-bar">{{$row->id ? __('Edit: ').$row->title : __('Add new car')}}</h1>
+                    <h1 class="title-bar">{{$row->id ? __('Edit: ').$row->title : __('Add new vehicle')}}</h1>
                     @if($row->slug)
                         <p class="item-url-demo">{{__("Permalink")}}: {{ url('car' ) }}/<a href="#" class="open-edit-input" data-name="slug">{{$row->slug}}</a>
                         </p>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="">
                     @if($row->slug)
-                        <a class="btn btn-primary btn-sm" href="{{$row->getDetailUrl(request()->query('lang'))}}" target="_blank">{{__("View Car")}}</a>
+                        <a class="btn btn-primary btn-sm" href="{{$row->getDetailUrl(request()->query('lang'))}}" target="_blank">{{__("View Vehicle")}}</a>
                     @endif
                 </div>
             </div>
@@ -80,7 +80,7 @@
                                 <div class="panel-title"><strong>{{__("Availability")}}</strong></div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <label>{{__('Car Featured')}}</label>
+                                        <label>{{__('Vehicle Featured')}}</label>
                                         <br>
                                         <label>
                                             <input type="checkbox" name="is_featured" @if($row->is_featured) checked @endif value="1"> {{__("Enable featured")}}

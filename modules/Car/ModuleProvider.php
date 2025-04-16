@@ -38,18 +38,18 @@ class ModuleProvider extends ModuleServiceProvider
             'car'=>[
                 "position"=>32,
                 'url'        => route('car.admin.index'),
-                'title'      => __('Car'),
+                'title'      => __('Vehicle'),
                 'icon'       => 'ion-logo-model-s',
                 'permission' => 'car_view',
                 'children'   => [
                     'add'=>[
                         'url'        => route('car.admin.index'),
-                        'title'      => __('All Cars'),
+                        'title'      => __('All Vehicles'),
                         'permission' => 'car_view',
                     ],
                     'create'=>[
                         'url'        => route('car.admin.create'),
-                        'title'      => __('Add new Car'),
+                        'title'      => __('Add new Vehicle'),
                         'permission' => 'car_create',
                     ],
                     'attribute'=>[
@@ -86,7 +86,7 @@ class ModuleProvider extends ModuleServiceProvider
         return [
             'car'=>[
                 'class' => Car::class,
-                'name'  => __("Car"),
+                'name'  => __("Vehicle"),
                 'items' => Car::searchForMenu(),
                 'position'=>41
             ]
@@ -99,18 +99,18 @@ class ModuleProvider extends ModuleServiceProvider
         if(Car::isEnable()){
             $res['car'] = [
                 'url'   => route('car.vendor.index'),
-                'title'      => __("Manage Car"),
+                'title'      => __("Manage Vehicle"),
                 'icon'       => Car::getServiceIconFeatured(),
                 'position'   => 30,
                 'permission' => 'car_view',
                 'children' => [
                     [
                         'url'   => route('car.vendor.index'),
-                        'title'  => __("All Cars"),
+                        'title'  => __("All Vehicles"),
                     ],
                     [
                         'url'   => route('car.vendor.create'),
-                        'title'      => __("Add Car"),
+                        'title'      => __("Add Vehicle"),
                         'permission' => 'car_create',
                     ],
                     [

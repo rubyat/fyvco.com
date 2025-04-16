@@ -89,7 +89,7 @@ span.price_text {
 }
 
 .header .row {
-    
+
     margin-top: 0;
 }
 
@@ -247,7 +247,7 @@ span.price_text {
     gap: 20px;
 }
 
-.pickup_form_area 
+.pickup_form_area
  span.clear-loc {
     top: 11px;
     right: 10px;
@@ -280,7 +280,7 @@ span.price_text {
     border-right: 1px solid #d6d6d6;
 }
 
-.time_date_picker_form .date-wrapper, 
+.time_date_picker_form .date-wrapper,
 .time_date_picker_form .fvy_date_picker_time {
     padding: 8px;
     text-align: center;
@@ -309,7 +309,7 @@ span.price_text {
 
 .fyv_icon_rating_area {
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 .login-item .is_login img{
@@ -399,7 +399,7 @@ span.price_text {
 }
 
 .fyv.home_name_rev .car_name {
-    white-space: nowrap; 
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -612,6 +612,36 @@ i.whatsapp_button, i.search_lens {
 
 .header .header-menu .menu .login-item .subnav {
     top: 80%;
+}
+
+
+
+
+.show_sharch_area .masthead__tabs.is-in-view {
+    position: fixed !important;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    margin-top: 0;
+    padding: 20px;
+    transition: .5;
+}
+
+.show_sharch_area .masthead__tabs.is-in-view .tabs.-bookmark.js-tabs {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.show_sharch_area .page-template-content {
+    margin-top: 290px;
+}
+
+
+.masthead.-type-3 .masthead__tabs {
+    z-index: 2;
+    position: relative;
 }
 
 

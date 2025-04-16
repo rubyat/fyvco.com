@@ -43,18 +43,18 @@ class ModuleProvider extends ModuleServiceProvider
             'hotel'=>[
                 "position"=>45,
                 'url'        => route('hotel.admin.index'),
-                'title'      => __('Hotel'),
+                'title'      => __('Villa'),
                 'icon'       => 'fa fa-building-o',
                 'permission' => 'hotel_view',
                 'children'   => [
                     'add'=>[
                         'url'        => route('hotel.admin.index'),
-                        'title'      => __('All Hotels'),
+                        'title'      => __('All Villas'),
                         'permission' => 'hotel_view',
                     ],
                     'create'=>[
                         'url'        => route('hotel.admin.create'),
-                        'title'      => __('Add new Hotel'),
+                        'title'      => __('Add new Villa'),
                         'permission' => 'hotel_create',
                     ],
                     'attribute'=>[
@@ -105,18 +105,18 @@ class ModuleProvider extends ModuleServiceProvider
         if(Hotel::isEnable()){
             $res['hotel'] = [
                 'url'   => route('hotel.vendor.index'),
-                'title'      => __("Manage Hotel"),
+                'title'      => __("Manage Villa"),
                 'icon'       => Hotel::getServiceIconFeatured(),
                 'position'   => 70,
                 'permission' => 'hotel_view',
                 'children' => [
                     [
                         'url'   => route('hotel.vendor.index'),
-                        'title'  => __("All Hotels"),
+                        'title'  => __("All Villas"),
                     ],
                     [
                         'url'   => route('hotel.vendor.create'),
-                        'title'      => __("Add Hotel"),
+                        'title'      => __("Add Villa"),
                         'permission' => 'hotel_create',
                     ],
                     [
