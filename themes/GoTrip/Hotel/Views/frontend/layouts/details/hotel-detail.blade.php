@@ -27,7 +27,7 @@
                 <div class="row x-gap-15 y-gap-15 items-center">
                     <div class="col-auto">
                         <div class="text-14">
-                            {{ __('From') }}
+                            {{ __('Par night') }}
                             <div class="d-inline-flex justify-content-end align-baseline mt-5">
                                 <div class="text-16 text-red-1 line-through mr-5">{{ $row->display_sale_price }}</div>
                                 <div class="text-22 lh-12 fw-600">{{ $row->display_price }}</div>
@@ -37,7 +37,7 @@
 
                     <div class="col-auto">
                         <a href="#hotel-rooms-form" class="button h-50 px-24 -dark-1 bg-blue-1 text-white">
-                            {{ __('Select Room') }} <div class="icon-arrow-top-right ml-15"></div>
+                            {{ __('Start Booking') }} <div class="icon-arrow-top-right ml-15"></div>
                         </a>
                     </div>
                 </div>
@@ -47,7 +47,11 @@
 </section>
 
 @if($row->getGallery())
-    @include('Layout::common.detail.gallery2',['galleries' => $row->getGallery()])
+    <div class="mt-10">
+        <div class="container">
+            @include('Layout::common.detail.gallery5car',['galleries' => $row->getGallery()])
+        </div>
+    </div>
 @endif
 
 <section class="pt-30" id="hotel-rooms">

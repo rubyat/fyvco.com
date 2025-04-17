@@ -9,7 +9,7 @@
     <div class="form-book">
         <div class="form-search-rooms">
             <div class="d-flex form-search-row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="form-group form-date-field form-date-search " @click="openStartDate" data-format="{{get_moment_date_format()}}">
                         <i class="fa fa-angle-down arrow"></i>
                         <input type="text" class="start_date" ref="start_date" style="height: 1px; visibility: hidden">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="searchMenu-guests px-20 py-10 rounded-4 js-form-dd form-group" style="height: 100%; cursor: pointer">
                         <i class="fa fa-angle-down arrow"></i>
                         <div data-x-dd-click="searchMenu-guests">
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-btn">
+                <div class="col-md-4 col-btn d-none">
                     <div class="g-button-submit bg-blue-1">
                         <button class="btn btn-primary btn-search text-white" @click="checkAvailability" :class="{'loading':onLoadAvailability}" type="submit">
                             {{__("Check Availability")}}

@@ -63,7 +63,7 @@
                             <th width="60px"><input type="checkbox" class="check-all"></th>
                             <th> {{ __('Name')}}</th>
                             <th width="200px"> {{ __('Location')}}</th>
-                            <th width="130px"> {{ __('Author')}}</th>
+                            <th width="130px"> {{ __('Brand')}}</th>
                             <th width="100px"> {{ __('Status')}}</th>
                             <th width="100px"> {{ __('Reviews')}}</th>
                             <th width="100px"> {{ __('Date')}}</th>
@@ -83,13 +83,7 @@
                                         <a href="{{route('car.admin.edit',['id'=>$row->id])}}">{{$row->title}}</a>
                                     </td>
                                     <td>{{$row->location->name ?? ''}}</td>
-                                    <td>
-                                        @if(!empty($row->author))
-                                            {{$row->author->getDisplayName()}}
-                                        @else
-                                            {{__("[Author Deleted]")}}
-                                        @endif
-                                    </td>
+                                    <td>{{$row->brand->name ?? ''}}</td>
                                     <td><span class="badge badge-{{ $row->status }}">{{ $row->status }}</span></td>
                                     <td>
                                         <a target="_blank" href="{{ route('review.admin.index',['service_id'=>$row->id]) }}" class="review-count-approved">

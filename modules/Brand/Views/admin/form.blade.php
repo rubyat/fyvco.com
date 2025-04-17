@@ -3,7 +3,7 @@
     <input type="text" value="{{$translation->name}}" placeholder="{{__("Brand name")}}" name="name" class="form-control">
 </div>
 @if(is_default_lang())
-    <div class="form-group">
+    <div class="form-group d-none">
         <label>{{__("Parent")}}</label>
         <select name="parent_id" class="form-control">
             <option value="">{{__("-- Please Select --")}}</option>

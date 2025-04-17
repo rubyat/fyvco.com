@@ -3,8 +3,7 @@
         <div class="fixed_menu_bottom">
             <div class="box-submit">
                 <a href="javascript:;" class="large_bt" id="toggleSearchBtn">
-                    <span>Search Vehicle/Villa</span>
-                    <i class="fa fa-search"></i>
+                    <i class="fa fa-search"></i> <span> Vehicle/Villa</span>
                 </a>
             </div>
             <div class="Whatsapp_cont">

@@ -27,21 +27,20 @@
         </div>
         <div class="pt-40 overflow-hidden js-section-slider" data-gap="30" data-slider-cols="xl-5 lg-3 md-2 sm-2 base-1" data-nav-prev="js-places-prev" data-pagination="js-places-pag" data-nav-next="js-places-next">
             <div class="swiper-wrapper">
-                @if($brandList)
-                    @foreach($brandList as $key => $row)
+                @if($rows)
+                    @foreach($rows as $key => $row)
                         @php
                             $translation = $row->translate();
-                            $link_brand = '#';
-                            $to_brand_detail = '#';
-                            // if(is_string($service_type)){
-                            //     $link_brand = $row->getLinkForPageSearch($service_type);
-                            // }
-                            // if(is_array($service_type) and count($service_type) == 1){
-                            //     $link_brand = $row->getLinkForPageSearch($service_type[0] ?? "");
-                            // }
-                            // if($to_brand_detail){
-                            //     $link_brand = $row->getDetailUrl();
-                            // }
+                            $link_brand = false;
+                            if(is_string($service_type)){
+                                $link_brand = $row->getLinkForPageSearch($service_type);
+                            }
+                            if(is_array($service_type) and count($service_type) == 1){
+                                $link_brand = $row->getLinkForPageSearch($service_type[0] ?? "");
+                            }
+                            if($to_brand_detail){
+                                $link_brand = $row->getDetailUrl();
+                            }
                         @endphp
                         <div data-anim-child="slide-left delay-{{$key + 3}}" class="swiper-slide">
                             @if($to_brand_detail)

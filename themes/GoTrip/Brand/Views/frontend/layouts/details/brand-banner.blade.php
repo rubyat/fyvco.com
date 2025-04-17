@@ -37,11 +37,11 @@
         <div class="effect"></div>
         <div class="absolute z-2 px-50 py-60 text-banner">
             <h1 class="text-50 fw-600 text-white">{{$translation->name}}</h1>
-            <div class="text-white">{{ __("Explore deals, travel guides and things to do in :text",['text'=>$translation->name]) }}</div>
+            {{-- <div class="text-white">{{ __("Explore deals, travel guides and things to do in :text",['text'=>$translation->name]) }}</div> --}}
         </div>
     </div>
 </div>
-<div class="row x-gap-20 y-gap-20 items-center pt-20">
+{{-- <div class="row x-gap-20 y-gap-20 items-center pt-20">
     @php $types = get_bookable_services() @endphp
     @if(!empty($types))
         @foreach($types as $type=>$moduleClass)
@@ -56,4 +56,4 @@
             </div>
         @endforeach
     @endif
-</div>
+</div> --}}

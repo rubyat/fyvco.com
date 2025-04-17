@@ -16,8 +16,6 @@
 
                 @include('Brand::frontend.layouts.details.brand-general-info')
 
-                @include('Brand::frontend.layouts.details.brand-map')
-
                 @include('Brand::frontend.layouts.details.brand-service')
 
                 @include('Brand::frontend.layouts.details.brand-trip-idea')

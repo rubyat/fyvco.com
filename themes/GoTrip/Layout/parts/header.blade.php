@@ -92,7 +92,7 @@
                                     @include('Core::frontend.currency-switcher')
                                     @include('Language::frontend.switcher-dropdown')
                                     @if(!Auth::check())
-                                        
+
                                             @php $btn_expert = '-white bg-white text-dark-1';
                                                 $btn_login = 'border-white -outline-white text-white';
                                                 if ($headerStyle == 'transparent_v6'){
@@ -145,7 +145,7 @@
                                                         </a>
 
 
-        
+
                                                         <ul class="subnav">
                                                             <li class="menu-hr">
                                                                 <a class="dropdown-item" href="{{route('login')}}" ><i class="fa fa-sign-in mr-10"></i> {{__('Login')}}</a>
@@ -169,19 +169,23 @@
                                                         <i class="icon icon-chevron-sm-down"></i>
                                                     </a>
                                                     <ul class="subnav">
-                                                        @if(Auth::user()->hasPermission('dashboard_vendor_access'))
+                                                        {{-- @if(Auth::user()->hasPermission('dashboard_vendor_access'))
                                                             <li><a href="{{route('vendor.dashboard')}}" class="dropdown-item"><i class="fa fa-line-chart mr-10"></i> {{__("Vendor Dashboard")}}</a></li>
-                                                        @endif
-                                                        <li class="@if(Auth::user()->hasPermission('dashboard_vendor_access')) menu-hr @endif">
-                                                            <a href="{{route('user.profile.index')}}" class="dropdown-item"><i class="fa fa-address-card mr-10"></i> {{__("My profile")}}</a>
-                                                        </li>
-                                                        @if(setting_item('inbox_enable'))
-                                                            <li class="menu-hr"><a href="{{route('user.chat')}}" class="dropdown-item"><i class="fa fa-comments mr-10"></i> {{__("Messages")}}</a></li>
-                                                        @endif
-                                                        <li class="menu-hr"><a href="{{route('user.booking_history')}}" class="dropdown-item"><i class="fa fa-clock-o mr-10"></i> {{__("Booking History")}}</a></li>
-                                                        <li class="menu-hr"><a href="{{route('user.change_password')}}" class="dropdown-item"><i class="fa fa-lock mr-10"></i> {{__("Change password")}}</a></li>
+                                                        @endif --}}
+
                                                         @if(Auth::user()->hasPermission('dashboard_access'))
                                                             <li class="menu-hr"><a href="{{route('admin.index')}}" class="dropdown-item"><i class="fa fa-dashboard mr-10"></i> {{__("Admin Dashboard")}}</a></li>
+                                                        @else
+
+                                                            <li class="@if(Auth::user()->hasPermission('dashboard_vendor_access')) menu-hr @endif">
+                                                                <a href="{{route('user.profile.index')}}" class="dropdown-item"><i class="fa fa-address-card mr-10"></i> {{__("My profile")}}</a>
+                                                            </li>
+                                                            @if(setting_item('inbox_enable'))
+                                                                <li class="menu-hr"><a href="{{route('user.chat')}}" class="dropdown-item"><i class="fa fa-comments mr-10"></i> {{__("Messages")}}</a></li>
+                                                            @endif
+                                                            <li class="menu-hr"><a href="{{route('user.booking_history')}}" class="dropdown-item"><i class="fa fa-clock-o mr-10"></i> {{__("Booking History")}}</a></li>
+                                                            <li class="menu-hr"><a href="{{route('user.change_password')}}" class="dropdown-item"><i class="fa fa-lock mr-10"></i> {{__("Change password")}}</a></li>
+
                                                         @endif
                                                         <li class="menu-hr">
                                                             <a class="dropdown-item"  href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out mr-10"></i> {{__('Logout')}}</a>

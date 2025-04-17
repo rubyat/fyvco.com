@@ -42,8 +42,11 @@ class ModuleProvider extends ModuleServiceProvider
         return ['plan'=>Plan::class];
     }
 
-    public static function getAdminMenu()
+    public static function getAdminMenu_()
     {
+
+
+
         $noti_verify = User::countVerifyRequest();
         $noti_upgrade = VendorRequest::where('status', 'pending')->whereHas('user')->count();
         $noti = $noti_verify;

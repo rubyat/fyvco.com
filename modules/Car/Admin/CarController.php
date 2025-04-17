@@ -18,6 +18,7 @@ use Modules\Core\Events\CreatedServicesEvent;
 use Modules\Core\Events\UpdatedServiceEvent;
 use Modules\Core\Models\Attributes;
 use Modules\Location\Models\Location;
+use Modules\Brand\Models\Brand;
 
 class CarController extends AdminController
 {
@@ -26,8 +27,9 @@ class CarController extends AdminController
     protected $car_term;
     protected $attributes;
     protected $location;
+    protected $brand;
 
-    public function __construct(Car $car,CarTranslation $car_translation,CarTerm $car_term, Attributes $attributes, Location $location)
+    public function __construct(Car $car,CarTranslation $car_translation,CarTerm $car_term, Attributes $attributes, Location $location, Brand $brand)
     {
         $this->setActiveMenu(route('car.admin.index'));
         $this->car = $car;
@@ -35,6 +37,7 @@ class CarController extends AdminController
         $this->car_term = $car_term;
         $this->attributes = $attributes;
         $this->location = $location;
+        $this->brand = $brand;
     }
 
     public function callAction($method, $parameters)
@@ -60,6 +63,9 @@ class CarController extends AdminController
         if (!empty($location_id = $request->query('location_id'))) {
             $query->where('location_id', $location_id);
         }
+        if (!empty($brand_id = $request->query('brand_id'))) {
+            $query->where('brand_id', $brand_id);
+        }
         if ($this->hasPermission('car_manage_others')) {
             if (!empty($author = $request->input('vendor_id'))) {
                 $query->where('author_id', $author);
@@ -67,6 +73,13 @@ class CarController extends AdminController
         } else {
             $query->where('author_id', Auth::id());
         }
+
+        // foreach($query->with(['author'])->paginate(20) as $row){
+        //     //dd($row);
+        //     dd($row->brand);
+        // }
+
+
         $data = [
             'rows'              => $query->with(['author'])->paginate(20),
             'car_manage_others' => $this->hasPermission('car_manage_others'),
@@ -131,6 +144,7 @@ class CarController extends AdminController
             'row'          => $row,
             'attributes'   => $this->attributes::where('service', 'car')->get(),
             'car_location' => $this->location::where('status', 'publish')->get()->toTree(),
+            'car_brand'     => $this->brand::where('status', 'publish')->get()->toTree(),
             'translation'  => new $this->car_translation(),
             'breadcrumbs'  => [
                 [
@@ -166,6 +180,7 @@ class CarController extends AdminController
             "selected_terms"    => $row->terms->pluck('term_id'),
             'attributes'        => $this->attributes::where('service', 'car')->get(),
             'car_location'      => $this->location::where('status', 'publish')->get()->toTree(),
+            'car_brand'         => $this->brand::where('status', 'publish')->get()->toTree(),
             'enable_multi_lang' => true,
             'breadcrumbs'       => [
                 [
@@ -214,6 +229,7 @@ class CarController extends AdminController
             'banner_image_id',
             'gallery',
             'location_id',
+            'brand_id',
             'address',
             'map_lat',
             'map_lng',

@@ -6,9 +6,10 @@
             <div class="row y-gap-15 items-center justify-between">
                 <div class="col-auto">
                     <div class="text-14 text-light-1">
-                        {{__("From")}}
+
                         <span class="text-14 text-red-1 line-through">{{ $row->display_sale_price }}</span>
                         <span class="text-20 fw-500 text-dark-1">{{ $row->display_price }}</span>
+                        {{__("/par day")}}
                     </div>
                 </div>
                 @if($review_score)
@@ -42,7 +43,7 @@
             </div>
             <div class="form-book" :class="{'d-none':enquiry_type!='book'}">
                 <div class="form-content">
-                    <div class="px-20 py-10 border-light rounded-4 -right py-20 mt-10">
+                    <div class="car_booking_form_area border-light rounded-4 -right">
                         <div class="row y-gap-20">
                             <div class="col-12">
                                 <div class="form-group form-date-field form-date-search clearfix position-relative" data-format="{{get_moment_date_format()}}">
@@ -166,7 +167,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="submit-group">
-                                    <a class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white cursor-pointer" @click="doSubmit($event)" :class="{'disabled':onSubmit,'btn-success':(step == 2),'btn-primary':step == 1}" name="submit">
+                                    <a class="button -dark-1 py-15 px-35 h-50 col-12 rounded-4 bg-blue-1 text-white cursor-pointer" @click="doSubmit($event)" :class="{'disabled':onSubmit,'btn-success':(step == 2),'btn-primary':step == 1}" name="submit">
                                         <span v-if="step == 1">{{__("BOOK NOW")}}</span>
                                         <span v-if="step == 2">{{__("Book Now")}}</span>
                                         <i v-show="onSubmit" class="fa fa-spinner fa-spin"></i>
@@ -174,31 +175,33 @@
                                     <div class="alert-text mt-10" v-show="message.content" v-html="message.content" :class="{'danger':!message.type,'success':message.type}"></div>
                                 </div>
 
-                                
 
-                            
 
-                                
+
+
+
                             </div>
 
 
-                            
+
 
                         </div>
 
                     </div>
 
-                    <div class="whatsapp_booking_button mt-30">
-                        <div class="submit-group mt-10">
-                            <a target="_blank" href="https://api.whatsapp.com/send/?phone=+13053361130&amp;text=Hi&amp;app_absent=0" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">
-                                <span>{{__("BOOK VIA WHATSAPP")}}</span>
-                            </a>
-                        </div>
+                    <div class="whatsapp_booking_button">
+                        <div class="car_booking_form_area border-light rounded-4 -right">
+                            <div class="submit-group">
+                                <a target="_blank" href="https://api.whatsapp.com/send/?phone=+13053361130&amp;text=Hi&amp;app_absent=0" class="button -dark-1 py-15 px-35 h-50 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">
+                                    <span>{{__("BOOK VIA WHATSAPP")}}</span>
+                                </a>
+                            </div>
 
-                        <div class="submit-group mt-10 book_via_sms">
-                            <a target="_blank" href="sms:+13053361130;?&amp;body= Hi, I need to book a Car" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">
-                                <span>{{__("BOOK VIA SMS")}}</span>
-                            </a>
+                            <div class="submit-group mt-10 book_via_sms">
+                                <a target="_blank" href="sms:+13053361130;?&amp;body= Hi, I need to book a Car" class="button -dark-1 py-15 px-35 h-50 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">
+                                    <span>{{__("BOOK VIA SMS")}}</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 

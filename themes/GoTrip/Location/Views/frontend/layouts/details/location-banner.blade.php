@@ -41,7 +41,7 @@
         </div>
     </div>
 </div>
-<div class="row x-gap-20 y-gap-20 items-center pt-20">
+<div class="row x-gap-20 y-gap-20 items-center pt-20 d-none">
     @php $types = get_bookable_services() @endphp
     @if(!empty($types))
         @foreach($types as $type=>$moduleClass)

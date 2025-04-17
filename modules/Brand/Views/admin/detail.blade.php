@@ -36,7 +36,7 @@
                                             {!! \Modules\Media\Helpers\FileHelper::fieldUpload('banner_image_id',$row->banner_image_id) !!}
                                         </div>
                                     </div>
-                                    <div class="form-group form-index-hide">
+                                    <div class="form-group form-index-hide d-none">
                                         <label class="control-label">{{__("The geographic coordinate")}}</label>
                                         <div class="control-map-group">
                                             <div id="map_content"></div>

@@ -857,7 +857,7 @@ class Hotel extends Bookable
                     'beds_html'       => $room->beds ? 'x' . $room->beds : '',
                     'adults_html'     => $room->adults ? 'x' . $room->adults : '',
                     'children_html'   => $room->children ? 'x' . $room->children : '',
-                    'number_selected' => 0,
+                    'number_selected' => 1,
                     'number'          => (int)$room->tmp_number ?? 0,
                     'min_day_stays'   => $room->min_day_stays ?? 0,
                     'image'           => $room->image_id ? get_file_url($room->image_id, 'medium') : '',

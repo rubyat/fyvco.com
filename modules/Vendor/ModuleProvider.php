@@ -22,7 +22,7 @@ class ModuleProvider extends ModuleServiceProvider
         $this->app->register(EventServiceProvider::class);
     }
 
-    public static function getAdminMenu()
+    public static function getAdminMenu_()
     {
         $count = VendorPayout::countInitial();
         return [

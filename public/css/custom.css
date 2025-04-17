@@ -644,6 +644,20 @@ i.whatsapp_button, i.search_lens {
     position: relative;
 }
 
+.hotel_rooms_form .hotel_room_book_status {
+    margin-top: 0 !important;
+    border-radius: 5px;
+}
+
+.cruiseSlider .cruiseSlider-slider img {
+    max-height: 80vh;
+}
+
+
+.car_booking_form_area {
+    padding: 10px;
+    margin-top: 20px;
+}
 
 
 @media only screen and (max-width:767px) {

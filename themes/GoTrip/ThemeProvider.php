@@ -31,21 +31,21 @@ class ThemeProvider extends \Themes\Base\ThemeProvider
     {
         parent::register();
         $this->app->register(\Themes\GoTrip\User\ModuleProvider::class);
-        $this->app->register(\Themes\GoTrip\Boat\ModuleProvider::class);
+        //$this->app->register(\Themes\GoTrip\Boat\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Page\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Location\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Brand\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Hotel\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\News\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Template\ModuleProvider::class);
-        $this->app->register(\Themes\GoTrip\Tour\ModuleProvider::class);
+        //$this->app->register(\Themes\GoTrip\Tour\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Car\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Contact\ModuleProvider::class);
-        $this->app->register(\Themes\GoTrip\Space\ModuleProvider::class);
+        //$this->app->register(\Themes\GoTrip\Space\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Core\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Vendor\ModuleProvider::class);
-        $this->app->register(\Themes\GoTrip\Event\ModuleProvider::class);
-        $this->app->register(\Themes\GoTrip\Flight\ModuleProvider::class);
+        //$this->app->register(\Themes\GoTrip\Event\ModuleProvider::class);
+        //$this->app->register(\Themes\GoTrip\Flight\ModuleProvider::class);
         $this->app->register(UpdaterProvider::class);
     }
 

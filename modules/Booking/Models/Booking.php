@@ -321,15 +321,15 @@ class Booking extends BaseModel
             'class'  => 'purple',
             'icon'   => 'icon ion-ios-cart'
         ];
-        $res[] = [
-            'size'   => 6,
-            'size_md'=>3,
-            'title'  => __("Earning"),
-            'amount' => format_money_main($total_data->total_earning),
-            'desc'   => __("Total Earning"),
-            'class'  => 'pink',
-            'icon'   => 'icon ion-ios-gift'
-        ];
+        // $res[] = [
+        //     'size'   => 6,
+        //     'size_md'=>3,
+        //     'title'  => __("Earning"),
+        //     'amount' => format_money_main($total_data->total_earning),
+        //     'desc'   => __("Total Earning"),
+        //     'class'  => 'pink',
+        //     'icon'   => 'icon ion-ios-gift'
+        // ];
         $res[] = [
 
             'size'   => 6,

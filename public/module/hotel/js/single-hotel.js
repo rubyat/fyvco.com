@@ -50,9 +50,12 @@
             },
             start_date(){
                 this.step = 1;
+                this.checkAvailability();
             },
             guests(){
                 this.step = 1;
+                this.checkAvailability();
+                console.log('guests ...');
             },
             person_types:{
                 handler:function f() {
@@ -334,7 +337,7 @@
                     }
                 }
 
-                
+
                 this.onLoadAvailability = true;
                 $.ajax({
                     url:bookingCore.module.hotel+'/checkAvailability',
@@ -567,26 +570,26 @@
         $(this).addClass("d-none");
     });
 
-    $(".start_room_sticky").each(function () {
-        var $this_list_room = $(this).closest(".hotel_rooms_form");
-        $(window).scroll(function() {
-            var window_height = $(window).height();
-            var windowTop = $(window).scrollTop();
-            var stickyTop = $('.start_room_sticky').offset().top + 100 - window_height;
-            var stickyBottom =  stickyTop + $this_list_room.height() - 300;
-            if (stickyTop < windowTop && windowTop < stickyBottom) {
-                $(document).find(".hotel_room_book_status").addClass("sticky").css("width",$this_list_room.width());
-                $(document).find(".end_room_sticky").css("min-height",$(document).find(".hotel_room_book_status").height() + 32 + 20);
+    // $(".start_room_sticky").each(function () {
+    //     var $this_list_room = $(this).closest(".hotel_rooms_form");
+    //     $(window).scroll(function() {
+    //         var window_height = $(window).height();
+    //         var windowTop = $(window).scrollTop();
+    //         var stickyTop = $('.start_room_sticky').offset().top + 100 - window_height;
+    //         var stickyBottom =  stickyTop + $this_list_room.height() - 300;
+    //         if (stickyTop < windowTop && windowTop < stickyBottom) {
+    //             $(document).find(".hotel_room_book_status").addClass("sticky").css("width",$this_list_room.width());
+    //             $(document).find(".end_room_sticky").css("min-height",$(document).find(".hotel_room_book_status").height() + 32 + 20);
 
-                setTimeout(function () {
-                    $(document).find(".hotel_room_book_status").addClass("active");
-                },100);
-            } else {
-                $(document).find(".hotel_room_book_status").removeClass("sticky").css("width","auto");
-                $(document).find(".end_room_sticky").css("min-height","auto");
-                $(document).find(".hotel_room_book_status").removeClass("active");
-            }
-        });
-    });
+    //             setTimeout(function () {
+    //                 $(document).find(".hotel_room_book_status").addClass("active");
+    //             },100);
+    //         } else {
+    //             $(document).find(".hotel_room_book_status").removeClass("sticky").css("width","auto");
+    //             $(document).find(".end_room_sticky").css("min-height","auto");
+    //             $(document).find(".hotel_room_book_status").removeClass("active");
+    //         }
+    //     });
+    // });
 
 })(jQuery);

@@ -14,7 +14,7 @@ class ModuleProvider extends \Modules\ModuleServiceProvider
     {
         $this->app->register(RouterServiceProvider::class);
     }
-    public static function getAdminMenu()
+    public static function getAdminMenu_()
     {
         return [
             'theme'=>[

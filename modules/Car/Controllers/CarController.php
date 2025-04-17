@@ -45,6 +45,7 @@ class CarController extends Controller
         }
         $query = $this->carClass->search($request->input());
         $list = $query->paginate($limit);
+
         $markers = [];
         if (!empty($list) and $for_map) {
             foreach ($list as $row) {

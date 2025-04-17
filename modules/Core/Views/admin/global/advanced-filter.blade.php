@@ -1,4 +1,4 @@
-<div class="mb-3">
+{{-- <div class="mb-3">
     <label class="d-block" for="exampleInputEmail1">{{ __("Vendor") }}</label>
     @php
     $user = !empty(Request()->vendor_id) ? App\User::find(Request()->vendor_id) : false;
@@ -16,7 +16,7 @@
         $user->name_or_email . ' (#' . $user->id . ')'
     ] : false)
     @endphp
-</div>
+</div> --}}
 <div class="mb-3">
     <label class="d-block" for="exampleInputEmail1">{{ __("Location") }}</label>
     @php

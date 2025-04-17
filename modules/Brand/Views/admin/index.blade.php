@@ -13,7 +13,7 @@
                         <form action="{{route('brand.admin.store',['id'=>'-1','lang'=>request()->query('lang')])}}" method="post">
                             @csrf
                             @include('Brand::admin/form',['parents'=>$rows])
-                            <div class="form-group form-index-hide">
+                            <div class="form-group form-index-hide d-none">
                                 <label class="control-label">{{__("Brand Map")}}</label>
                                 <div class="control-map-group">
                                     <div id="map_content"></div>

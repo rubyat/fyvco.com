@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Car\Models\CarTranslation;
 use Modules\User\Models\UserWishList;
 use Modules\Location\Models\Location;
+use Modules\Brand\Models\Brand;
 
 class Car extends Bookable
 {
@@ -852,6 +853,16 @@ class Car extends Bookable
                 });
             }
         }
+        if (!empty($brand_id = $request['brand_id'] ?? "" )) {
+            $brand = Brand::query()->where('id', $brand_id)->where("status","publish")->first();
+            if(!empty($brand)){
+                $query->join('bravo_brands', function ($join) use ($brand) {
+                    $join->on('bravo_brands.id', '=', 'bravo_cars.brand_id')
+                        ->where('bravo_brands._lft', '>=', $brand->_lft)
+                        ->where('bravo_brands._rgt', '<=', $brand->_rgt);
+                });
+            }
+        }
         if (!empty($price_range = $request['price_range'] ?? "")) {
             $pri_from = Currency::convertPriceToMain(explode(";", $price_range)[0]);
             $pri_to =  Currency::convertPriceToMain(explode(";", $price_range)[1]);
@@ -904,7 +915,7 @@ class Car extends Bookable
             $query->orderByRaw('FIELD (' . $query->qualifyColumn("id") . ', ' . implode(', ', $ids) . ') ASC');
         }
         $orderby = $request['orderby'] ?? "";
-        
+
 
         switch ($orderby){
             case "price_low_high":
@@ -937,7 +948,7 @@ class Car extends Bookable
             $query->where('max_guests','>=',$max_guests);
         }
 
-        return $query->with(['location','hasWishList','translation']);
+        return $query->with(['location', 'brand','hasWishList','translation']);
     }
 
     public function dataForApi($forSingle = false){
@@ -958,6 +969,12 @@ class Car extends Bookable
             $data['booking_fee'] = setting_item_array('car_booking_buyer_fees');
             if (!empty($location_id = $this->location_id)) {
                 $related =  parent::query()->where('location_id', $location_id)->where("status", "publish")->take(4)->whereNotIn('id', [$this->id])->with(['location','translation','hasWishList'])->get();
+                $data['related'] = $related->map(function ($related) {
+                        return $related->dataForApi();
+                    }) ?? null;
+            }
+            if (!empty($brand_id = $this->brand_id)) {
+                $related =  parent::query()->where('brand_id', $brand_id)->where("status", "publish")->take(4)->whereNotIn('id', [$this->id])->with(['brand','translation','hasWishList'])->get();
                 $data['related'] = $related->map(function ($related) {
                         return $related->dataForApi();
                     }) ?? null;
@@ -1022,5 +1039,10 @@ class Car extends Bookable
             }
         }
         return $search_fields;
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class, 'brand_id');
     }
 }

@@ -42,7 +42,7 @@ class ModuleProvider extends ModuleServiceProvider
         $this->app->bind(\RachidLaasri\LaravelInstaller\Controllers\DatabaseController::class,\Modules\Core\Installer\DatabaseController::class);
         $this->app->bind(\RachidLaasri\LaravelInstaller\Controllers\EnvironmentController::class,\Modules\Core\Installer\EnvironmentController::class);
     }
-    public static function getAdminMenu()
+    public static function getAdminMenu_()
     {
         return [
             'menu' => [
