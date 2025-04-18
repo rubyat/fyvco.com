@@ -91,7 +91,7 @@ class ModuleProvider extends ModuleServiceProvider
         return [
             'hotel'=>[
                 'class' => Hotel::class,
-                'name'  => __("Hotel"),
+                'name'  => __("Villa"),
                 'items' => Hotel::searchForMenu(),
                 'position'=>51
             ]

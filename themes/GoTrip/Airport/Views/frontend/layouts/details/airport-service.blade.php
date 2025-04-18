@@ -6,21 +6,21 @@
             if(!$moduleClass::isEnable() or in_array($type,$not_in)==true) continue;
             $moduleInst = new $moduleClass();
             $services = $moduleInst->select($moduleInst::getTableName().'.*')
-            ->join('bravo_locations', function ($join) use ($row,$moduleInst) {
-                $join->on('bravo_locations.id', '=', $moduleInst::getTableName().'.location_id')
-                    ->where('bravo_locations._lft', '>=', $row->_lft)
-                    ->where('bravo_locations._rgt', '<=', $row->_rgt);
+            ->join('bravo_airports', function ($join) use ($row,$moduleInst) {
+                $join->on('bravo_airports.id', '=', $moduleInst::getTableName().'.airport_id')
+                    ->where('bravo_airports._lft', '>=', $row->_lft)
+                    ->where('bravo_airports._rgt', '<=', $row->_rgt);
             })
-            ->where($moduleInst::getTableName().'.status','publish')->with('location')->take(8)->get();
+            ->where($moduleInst::getTableName().'.status','publish')->with('airport')->take(8)->get();
         @endphp
         @if($services->count()>0)
 
-            <section class="layout-pt-md layout-pb-md bravo-location-service-list">
+            <section class="layout-pt-md layout-pb-md bravo-airport-service-list">
                 <div class="row y-gap-20 justify-between items-end">
                     <div class="col-auto">
                         <div class="sectionTitle -md">
                             <h2 class="sectionTitle__title">{{ __('Most Popular :name',['name'=> call_user_func([$moduleClass,'getModelName']) ]) }}</h2>
-                            {{-- <p class=" sectionTitle__text mt-5 sm:mt-0">{{ __("Interdum et malesuada fames ac ante ipsum") }}</p> --}}
+                            <p class=" sectionTitle__text mt-5 sm:mt-0">{{ __("Interdum et malesuada fames ac ante ipsum") }}</p>
                         </div>
                     </div>
 

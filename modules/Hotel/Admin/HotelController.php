@@ -72,7 +72,7 @@ class HotelController extends AdminController
             'hotel_manage_others' => $this->hasPermission('hotel_manage_others'),
             'breadcrumbs'        => [
                 [
-                    'name' => __('Hotels'),
+                    'name' => __('Villas'),
                     'url'  => route('hotel.admin.index')
                 ],
                 [
@@ -80,7 +80,7 @@ class HotelController extends AdminController
                     'class' => 'active'
                 ],
             ],
-            'page_title'=>__("Hotel Management")
+            'page_title'=>__("Villa Management")
         ];
         return view('Hotel::admin.index', $data);
     }

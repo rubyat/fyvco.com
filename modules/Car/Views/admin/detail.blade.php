@@ -52,7 +52,7 @@
                             </div>
                         </div>
                         @if(is_default_lang())
-                        <div class="panel">
+                        <div class="panel d-none">
                             <div class="panel-title"><strong>{{__("Author Setting")}}</strong></div>
                             <div class="panel-body">
                                 <div class="form-group">
@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                             @include('Car::admin.car.attributes')
-                            @include('Car::admin.car.ical')
+                            {{-- @include('Car::admin.car.ical') --}}
                             <div class="panel">
                                 <div class="panel-title"><strong>{{__('Feature Image')}}</strong></div>
                                 <div class="panel-body">

@@ -4,9 +4,10 @@
             <div class="swiper-wrapper">
                 @foreach($row->getGallery() as $key=>$item)
                     <div class="swiper-slide">
-                        <a href="{{ $item['large'] }}" class="js-gallery" data-gallery="gallery2">
+                        {{-- <a href="{{ $item['large'] }}" class="js-gallery" data-gallery="gallery2">
                             <img src="{{ $item['large'] }}" alt="image" class="rounded-4">
-                        </a>
+                        </a> --}}
+                        <img src="{{ $item['large'] }}" alt="image" class="rounded-4">
                     </div>
                     @if($key == 6)
                         @break
@@ -47,7 +48,7 @@
                         </a>
                     @endif
                 </div>
-                {{-- @foreach($row->getGallery() as $key => $item)
+                @foreach($row->getGallery() as $key => $item)
                     @if($key == 0)
                         <a href="{{ $item['large'] }}" class="button px-24 py-15 -blue-1 bg-white z-2 js-gallery" data-gallery="gallery2">
                             {{ __("See All :count Photos", ['count' => count($row->getGallery()) ]) }}
@@ -55,7 +56,7 @@
                     @else
                         <a href="{{ $item['large'] }}" class="js-gallery" data-gallery="gallery2"></a>
                     @endif
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </div>

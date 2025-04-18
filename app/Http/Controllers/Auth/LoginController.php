@@ -49,6 +49,7 @@ class LoginController extends Controller
 
     public function redirectTo()
     {
+
         if(Auth::user()->hasPermission('dashboard_access')){
             return '/admin';
         }else{

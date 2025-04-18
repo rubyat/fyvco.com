@@ -1,26 +1,26 @@
 @extends('layouts.app')
 @push('css')
-    <link href="{{ asset('dist/frontend/module/location/css/location.css?_ver='.config('app.asset_version')) }}" rel="stylesheet">
+    <link href="{{ asset('dist/frontend/module/airport/css/airport.css?_ver='.config('app.asset_version')) }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset("libs/ion_rangeslider/css/ion.rangeSlider.min.css") }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset("libs/fotorama/fotorama.css") }}"/>
 @endpush
 @section('content')
-    <div class="bravo_detail_location">
+    <div class="bravo_detail_airport">
 
         <section class="layout-pb-md">
             <div class="container">
 
-                @include('Location::frontend.layouts.details.location-banner')
+                @include('Airport::frontend.layouts.details.airport-banner')
 
-                @include('Location::frontend.layouts.details.location-service')
+                @include('Airport::frontend.layouts.details.airport-overview')
 
-                @include('Location::frontend.layouts.details.location-overview')
+                @include('Airport::frontend.layouts.details.airport-general-info')
 
-                @include('Location::frontend.layouts.details.location-general-info')
+                @include('Airport::frontend.layouts.details.airport-map')
 
-                @include('Location::frontend.layouts.details.location-map')
+                @include('Airport::frontend.layouts.details.airport-service')
 
-                @include('Location::frontend.layouts.details.location-trip-idea')
+                @include('Airport::frontend.layouts.details.airport-trip-idea')
             </div>
         </section>
     </div>

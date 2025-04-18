@@ -35,6 +35,7 @@ class ThemeProvider extends \Themes\Base\ThemeProvider
         $this->app->register(\Themes\GoTrip\Page\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Location\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Brand\ModuleProvider::class);
+        $this->app->register(\Themes\GoTrip\Airport\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Hotel\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\News\ModuleProvider::class);
         $this->app->register(\Themes\GoTrip\Template\ModuleProvider::class);

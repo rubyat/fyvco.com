@@ -94,6 +94,14 @@ return [
     'location_delete',
     'location_manage_others',
 
+
+    // Location
+    'airport_view',
+    'airport_create',
+    'airport_update',
+    'airport_delete',
+    'airport_manage_others',
+
     // Brand
     'brand_view',
     'brand_create',

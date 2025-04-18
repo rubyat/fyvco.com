@@ -23,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-auto">
+            <div class="col-auto d-none">
                 <div class="row x-gap-15 y-gap-15 items-center">
                     <div class="col-auto">
                         <div class="text-14">

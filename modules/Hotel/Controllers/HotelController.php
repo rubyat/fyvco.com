@@ -124,7 +124,7 @@ class HotelController extends Controller
             'body_class'=>'is_single',
             'breadcrumbs'       => [
                 [
-                    'name'  => __('Hotel'),
+                    'name'  => __('Villa'),
                     'url'  => route('hotel.search'),
                 ],
             ],
