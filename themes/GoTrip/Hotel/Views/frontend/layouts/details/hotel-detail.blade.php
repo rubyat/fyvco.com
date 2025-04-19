@@ -74,7 +74,9 @@
                         @include('Hotel::frontend.layouts.details.hotel-attributes')
                     </div>
                     @if($translation->faqs)
-                        @include('Layout::common.detail.faq',['faqs'=>$translation->faqs])
+                        <div class="col-12">
+                            @include('Layout::common.detail.faq',['faqs'=>$translation->faqs])
+                        </div>
                     @endif
                     @includeIf("Layout::common.detail.surrounding")
                 </div>

@@ -210,6 +210,7 @@ class HotelController extends AdminController
             'title',
             'content',
             'video',
+            'faqs',
             'image_id',
             'banner_image_id',
             'gallery',

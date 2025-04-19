@@ -94,7 +94,7 @@
 
         <div class="price_action_area">
 
-          <h4 class="text-dark-1 text-18 lh-16 fw-500 has-skeleton car_title">
+          <h4 class="text-dark-1 text-18 fw-500 has-skeleton car_title">
 
             <a class="text-dark-1-i" @if(!empty($blank)) target="_blank" @endif href="{{ $row->getDetailUrl() }}"> <span>{{ $translation->title }}</span></a>
          </h4>
@@ -108,7 +108,7 @@
 
                     <span class="text-22 fw-500 text-dark-1 d-inline-flex">{{ $row->display_price }}</span>
 
-                    <span class="price_text">{{ __('from') }}</span> 
+                    <span class="price_text">{{ __('/par day') }}</span> 
 
                 </div>
 

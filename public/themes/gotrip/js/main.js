@@ -525,6 +525,7 @@ const Accordion = (function() {
         }
 
         button.addEventListener("click", (e) => {
+
           items[l].classList.toggle('is-active');
 
           if (titleChange) {

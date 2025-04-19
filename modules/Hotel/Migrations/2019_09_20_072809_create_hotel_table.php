@@ -28,6 +28,7 @@ class CreateHotelTable extends Migration
             $table->tinyInteger('is_featured')->nullable();
             $table->string('gallery', 255)->nullable();
             $table->string('video', 255)->nullable();
+            $table->text('faqs')->nullable();
             $table->text('policy')->nullable();
             $table->smallInteger('star_rate')->nullable();
             //Price

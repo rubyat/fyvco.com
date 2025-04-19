@@ -35,12 +35,15 @@ class Hotel extends Bookable
     protected $fillable      = [
         'title',
         'content',
+        'faqs',
         'status',
     ];
     protected $slugField     = 'slug';
     protected $slugFromField = 'title';
     protected $seo_type      = 'hotel';
     protected $casts = [
+        'faqs' => 'array',
+        'policy' => 'array',
         'policy' => 'array',
         'extra_price' => 'array',
         'service_fee' => 'array',
@@ -1074,6 +1077,7 @@ class Hotel extends Bookable
             $data['review_score'] = $this->getReviewDataAttribute();
             $data['review_stats'] = $this->getReviewStats();
             $data['review_lists'] = $this->getReviewList();
+            $data['faqs'] = $this->faqs;
             $data['policy'] = $this->policy;
             $data['star_rate'] = $this->star_rate;
             $data['check_in_time'] = $this->check_in_time;
