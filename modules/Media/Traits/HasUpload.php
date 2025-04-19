@@ -112,6 +112,7 @@ trait HasUpload
     {
 
         $uploadConfigs = config('bc.media.groups');
+
         $config = isset($uploadConfigs[$group]) ? $uploadConfigs[$group] : $uploadConfigs['default'];
 
         $rule = ['required','file'];

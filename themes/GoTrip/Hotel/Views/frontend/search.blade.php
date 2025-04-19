@@ -48,13 +48,20 @@
 
                 <div class="row">
 
-                    <div class="col-xl-3 col-lg-4">
+                    {{-- <div class="col-xl-3 col-lg-4">
 
                         @include('Hotel::frontend.layouts.search.filter-search')
 
                     </div>
 
                     <div class="col-xl-9 col-lg-8">
+
+                        @include('Hotel::frontend.layouts.search.list-item', ['layout' => $layout])
+
+                    </div> --}}
+
+
+                    <div class="col-xl-12 col-lg-12">
 
                         @include('Hotel::frontend.layouts.search.list-item', ['layout' => $layout])
 

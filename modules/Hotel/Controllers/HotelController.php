@@ -105,6 +105,7 @@ class HotelController extends Controller
 
     public function detail(Request $request, $slug)
     {
+
         $row = $this->hotelClass::where('slug', $slug)->with(['location','translation','hasWishList'])->first();;
         if ( empty($row) or !$row->hasPermissionDetailView()) {
             return redirect('/');
@@ -134,6 +135,9 @@ class HotelController extends Controller
             'name'  => $translation->title,
             'class' => 'active'
         ];
+
+        $data['is_booking_enabled'] = Hotel::isBookingEnable();
+
 
         $this->setActiveMenu($row);
         return view('Hotel::frontend.detail', $data);

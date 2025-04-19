@@ -10,42 +10,42 @@
     {
         public static function getSettingPages()
         {
-            $configs = [
-                'vendor' =>[
-                    'id'        => 'vendor',
-                    'title'     => __("Vendor Settings"),
-                    'position'  => 50,
-                    'view'      => "Vendor::admin.settings.vendor",
-                    "keys"      => [
-                        'vendor_enable',
-                        'vendor_commission_type',
-                        'vendor_commission_amount',
-                        'vendor_auto_approved',
-                        'vendor_role',
-                        'vendor_show_email',
-                        'vendor_show_phone',
-                        'vendor_payout_methods',
-                        'vendor_payout_booking_status',
-                        'vendor_term_conditions',
-                        'disable_payout',
+            // $configs = [
+            //     'vendor' =>[
+            //         'id'        => 'vendor',
+            //         'title'     => __("Vendor Settings"),
+            //         'position'  => 50,
+            //         'view'      => "Vendor::admin.settings.vendor",
+            //         "keys"      => [
+            //             'vendor_enable',
+            //             'vendor_commission_type',
+            //             'vendor_commission_amount',
+            //             'vendor_auto_approved',
+            //             'vendor_role',
+            //             'vendor_show_email',
+            //             'vendor_show_phone',
+            //             'vendor_payout_methods',
+            //             'vendor_payout_booking_status',
+            //             'vendor_term_conditions',
+            //             'disable_payout',
 
-                        'enable_mail_vendor_registered',
-                        'vendor_subject_email_registered',
-                        'vendor_content_email_registered',
-                        'admin_enable_mail_vendor_registered',
-                        'admin_subject_email_vendor_registered',
-                        'admin_content_email_vendor_registered',
+            //             'enable_mail_vendor_registered',
+            //             'vendor_subject_email_registered',
+            //             'vendor_content_email_registered',
+            //             'admin_enable_mail_vendor_registered',
+            //             'admin_subject_email_vendor_registered',
+            //             'admin_content_email_vendor_registered',
 
-                        'vendor_team_enable',
-                        'vendor_team_auto_approved',
-                    ],
-                    'html_keys' => [
+            //             'vendor_team_enable',
+            //             'vendor_team_auto_approved',
+            //         ],
+            //         'html_keys' => [
 
-                    ],
-                    'filter_values_callback'=>[SettingClass::class,'filterValuesBeforeSaving']
-                ]
-            ];
-            return apply_filters(Hook::VENDOR_SETTING_CONFIG,$configs);
+            //         ],
+            //         'filter_values_callback'=>[SettingClass::class,'filterValuesBeforeSaving']
+            //     ]
+            // ];
+            // return apply_filters(Hook::VENDOR_SETTING_CONFIG,$configs);
         }
 
         public static function filterValuesBeforeSaving($setting_values, Request $request)

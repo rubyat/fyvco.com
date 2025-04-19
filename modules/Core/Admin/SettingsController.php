@@ -92,6 +92,7 @@ class SettingsController extends AdminController
             Settings::clearCustomCssCache();
         }
 
+
         if (!empty($request->input())) {
             if (!empty($keys)) {
                 $all_values = $request->input();

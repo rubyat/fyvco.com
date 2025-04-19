@@ -3,7 +3,7 @@
 
 @endpush
 @section('content')
-    @if($layout != 'grid')
+    
     <section class="bravo_search_car pt-40 pb-40 bg-light-2">
         <div class="container">
             <div class="row">
@@ -18,14 +18,17 @@
             </div>
         </div>
     </section>
-    @endif
+
     <section class="layout-pt-md layout-pb-lg bg-light-2">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-4">
+                {{-- <div class="col-xl-3 col-lg-4">
                     @include('Car::frontend.layouts.search.filter-search')
                 </div>
                 <div class="col-xl-9 col-lg-8">
+                    @include('Car::frontend.layouts.search.list-item', ['style_layout' => $layout])
+                </div> --}}
+                <div class="col-xl-12 col-lg-12">
                     @include('Car::frontend.layouts.search.list-item', ['style_layout' => $layout])
                 </div>
             </div>

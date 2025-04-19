@@ -4,14 +4,11 @@
             <div class="swiper-wrapper">
                 @foreach($row->getGallery() as $key=>$item)
                     <div class="swiper-slide">
-                        {{-- <a href="{{ $item['large'] }}" class="js-gallery" data-gallery="gallery2">
+                        <a href="{{ $item['large'] }}" class="js-gallery" data-gallery="gallery3">
                             <img src="{{ $item['large'] }}" alt="image" class="rounded-4">
-                        </a> --}}
-                        <img src="{{ $item['large'] }}" alt="image" class="rounded-4">
+                        </a>
+                        {{-- <img src="{{ $item['large'] }}" alt="image" class="rounded-4"> --}}
                     </div>
-                    @if($key == 6)
-                        @break
-                    @endif
                 @endforeach
             </div>
             <div class="cruiseSlider__nav -prev js-prev">
@@ -68,9 +65,6 @@
                         <img src="{{ $item['thumb'] }}" alt="image" class="object-cover">
                     </div>
                 </div>
-                @if($key == 6)
-                    @break
-                @endif
             @endforeach
         </div>
     </div>

@@ -1,4 +1,7 @@
 @php $review_score = $row->review_data @endphp
+
+@if($is_booking_enabled)
+
 <h3 class="text-22 fw-500 heading-section mb-20 pt-40">{{__('Check Availability')}}</h3>
 <div id="hotel-rooms-form" class="hotel_rooms_form border-light rounded-4 shadow-4" v-cloak="" :class="{'d-none':enquiry_type!='book'}">
     <div class="nav-enquiry d-flex" v-if="is_form_enquiry_and_book">
@@ -111,10 +114,23 @@
 
 @include('Hotel::frontend.layouts.details.hotel-room-list')
 
+@endif
+
 <div class="booking_exta_buttons border-light rounded-4 shadow-4 mt-10 px-10 py-10">
 
     <div class="whatsapp_booking_button">
         <div class="row">
+            
+            @if(!$is_booking_enabled)
+                <div class="col-auto">
+                    <div class="submit-group" >
+                        <a data-toggle="modal" data-target="#enquiry_form_modal" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">
+                            <span>{{__("Contact us to book")}}</span>
+                        </a>
+                    </div>
+                </div>
+            @endif
+            
             <div class="col-auto">
                 <div class="submit-group">
                     <a target="_blank" href="https://api.whatsapp.com/send/?phone=+13053361130&amp;text=Hi&amp;app_absent=0" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white cursor-pointer btn-primary">

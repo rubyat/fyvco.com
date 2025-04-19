@@ -740,6 +740,11 @@ class Car extends Bookable
         return setting_item('car_disable') == false;
     }
 
+    public static function isBookingEnable(){
+        return setting_item('car_booking_disable') == false;
+    }
+    
+
 
     public function getBookingInRanges($object_id,$object_model,$from,$to,$object_child_id = false){
 

@@ -12,10 +12,11 @@ class SettingClass extends BaseSettingsClass
         $configs = [
             'car'=>[
                 'id'   => 'car',
-                'title' => __("Car Settings"),
+                'title' => __("Vehicle Settings"),
                 'position'=>20,
                 'view'=>"Car::admin.settings.car",
                 "keys"=>[
+                    'car_booking_disable',
                     'car_disable',
                     'car_page_search_title',
                     'car_page_search_banner',

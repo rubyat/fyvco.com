@@ -20,7 +20,7 @@
                             {!! \Modules\Media\Helpers\FileHelper::fieldUpload('car_page_search_banner',$settings['car_page_search_banner'] ?? "") !!}
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group d-none">
                         <label class="" >{{__("Layout Search")}}</label>
                         <div class="form-controls">
                             <select name="car_layout_search" class="form-control" >
@@ -32,7 +32,7 @@
                     </div>
                     <?php do_action(\Modules\Car\Hook::CAR_SETTING_AFTER_LAYOUT_SEARCH) ?>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 d-none">
                             <div class="form-group">
                                 <label class="" >{{__("Location Search Style")}}</label>
                                 <div class="form-controls">
@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label class="" >{{__("Limit item per Page")}}</label>
                                 <div class="form-controls">
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3" data-condition="car_location_search_style:is(autocompletePlace)">
+                        <div class="col-md-3 d-none" data-condition="car_location_search_style:is(autocompletePlace)">
                             <label class="" >{{__("Radius options")}}</label>
                             <div class="input-group mb-3">
                                 <input type="number" name="car_location_radius_value" min="0" value="{{ setting_item('car_location_radius_value',1)}}" class="form-control" >
@@ -66,7 +66,7 @@
                         </div>
 
                     </div>
-                    <div class="form-group">
+                    <div class="form-group d-none">
                         <label class="" >{{__("Layout Map Option")}}</label>
                         <div class="form-controls">
                             <select name="car_layout_map_option" class="form-control">
@@ -75,7 +75,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row d-none">
                         <div class="col-md-4">
                             <label>{{__("Map Lat Default")}}</label>
                             <div class="form-controls">
@@ -98,18 +98,20 @@
                             <i> {{ __('Get lat - lng in here') }} <a href="https://www.latlong.net" target="_blank">https://www.latlong.net</a></i>
                         </div>
                     </div>
-                    <div class="form-group mt-3">
+                    <div class="form-group mt-3 d-none">
                         <label class="" >{{__("Icon Marker in Map")}}</label>
                         <div class="form-controls form-group-image">
                             {!! \Modules\Media\Helpers\FileHelper::fieldUpload('car_icon_marker_map',$settings['car_icon_marker_map'] ?? "") !!}
                         </div>
+                        @php do_action(\Modules\Car\Hook::CAR_SETTING_AFTER_MAP) @endphp
                     </div>
-                    @php do_action(\Modules\Car\Hook::CAR_SETTING_AFTER_MAP) @endphp
                 @endif
             </div>
         </div>
-        @include('Car::admin.settings.form-search')
-        @include('Car::admin.settings.map-search')
+       <div class="d-none">
+            @include('Car::admin.settings.form-search')
+            @include('Car::admin.settings.map-search')
+       </div>
         <div class="panel">
             <div class="panel-title"><strong>{{__("SEO Options")}}</strong></div>
             <div class="panel-body">
@@ -410,7 +412,7 @@
 @endif
 @if(is_default_lang())
     <hr>
-    <div class="row">
+    <div class="row d-none">
         <div class="col-sm-4">
             <h3 class="form-group-title">{{__("Vendor Options")}}</h3>
             <p class="form-group-desc">{{__('Vendor config for car')}}</p>
@@ -458,9 +460,8 @@
 
 
 @if(is_default_lang())
-<hr>
 
-<div class="row">
+<div class="row d-none">
     <div class="col-sm-4">
         <h3 class="form-group-title">{{__("Booking Deposit")}}</h3>
     </div>
@@ -506,8 +507,26 @@
         </div>
     </div>
 </div>
-<hr>
+
 <div class="row">
+    <div class="col-sm-4">
+        <h3 class="form-group-title">{{__("Disable Vehicle booking?")}}</h3>
+    </div>
+    <div class="col-sm-8">
+        <div class="panel">
+            <div class="panel-title"><strong>{{__("Disable Vehicle booking")}}</strong></div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="form-controls">
+                    <label><input type="checkbox" name="car_booking_disable" value="1" @if(setting_item('car_booking_disable')) checked @endif > {{__('Yes, please disable it')}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row d-none">
     <div class="col-sm-4">
         <h3 class="form-group-title">{{__("Disable car module?")}}</h3>
     </div>

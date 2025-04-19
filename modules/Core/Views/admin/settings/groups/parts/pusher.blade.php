@@ -1,6 +1,5 @@
 @if(is_default_lang())
-    <hr>
-    <div class="row">
+    <div class="row d-none">
         <div class="col-sm-4">
             <h3 class="form-group-title">{{__('Config Broadcast')}}</h3>
             <p class="form-group-desc">{{__('Change your config broadcast site')}}</p>
@@ -22,8 +21,7 @@
             </div>
         </div>
     </div>
-    <hr>
-    <div class="row">
+    <div class="row d-none">
         <div class="col-sm-4">
             <h3 class="form-group-title">{{__('Pusher API')}}</h3>
             <p class="form-group-desc">{{__('Change your API for pusher here. It will use for chat plugin and notification')}}</p>

@@ -882,6 +882,11 @@ class Hotel extends Bookable
         return setting_item('hotel_disable') == false;
     }
 
+    public static function isBookingEnable()
+    {
+        return setting_item('hotel_booking_disable') == false;
+    }
+
     public function isDepositEnable(){
         return (setting_item('hotel_deposit_enable') and setting_item('hotel_deposit_amount'));
     }
